@@ -61,44 +61,44 @@ module Azure::Compute::Profiles::Latest
       DiskCreateOption = Azure::Compute::Mgmt::V2018_04_01::Models::DiskCreateOption
       SnapshotStorageAccountTypes = Azure::Compute::Mgmt::V2018_04_01::Models::SnapshotStorageAccountTypes
       AccessLevel = Azure::Compute::Mgmt::V2018_04_01::Models::AccessLevel
-      ImageListResult = Azure::Compute::Mgmt::V2018_06_01::Models::ImageListResult
       ComputeOperationValue = Azure::Compute::Mgmt::V2018_06_01::Models::ComputeOperationValue
       VirtualMachineScaleSetUpdateOSProfile = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdateOSProfile
-      RecoveryWalkResponse = Azure::Compute::Mgmt::V2018_06_01::Models::RecoveryWalkResponse
-      SubResourceReadOnly = Azure::Compute::Mgmt::V2018_06_01::Models::SubResourceReadOnly
+      VirtualMachineScaleSetManagedDiskParameters = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetManagedDiskParameters
       AutoOSUpgradePolicy = Azure::Compute::Mgmt::V2018_06_01::Models::AutoOSUpgradePolicy
       RollingUpgradePolicy = Azure::Compute::Mgmt::V2018_06_01::Models::RollingUpgradePolicy
-      RunCommandParameterDefinition = Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandParameterDefinition
       ImageOSDisk = Azure::Compute::Mgmt::V2018_06_01::Models::ImageOSDisk
+      RunCommandParameterDefinition = Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandParameterDefinition
       ImageDataDisk = Azure::Compute::Mgmt::V2018_06_01::Models::ImageDataDisk
       ImageStorageProfile = Azure::Compute::Mgmt::V2018_06_01::Models::ImageStorageProfile
+      ImageListResult = Azure::Compute::Mgmt::V2018_06_01::Models::ImageListResult
       RunCommandInputParameter = Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandInputParameter
       ComputeOperationListResult = Azure::Compute::Mgmt::V2018_06_01::Models::ComputeOperationListResult
-      RollbackStatusInfo = Azure::Compute::Mgmt::V2018_06_01::Models::RollbackStatusInfo
-      VirtualMachineScaleSetManagedDiskParameters = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetManagedDiskParameters
+      RollingUpgradeProgressInfo = Azure::Compute::Mgmt::V2018_06_01::Models::RollingUpgradeProgressInfo
       VirtualMachineScaleSetUpdateOSDisk = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdateOSDisk
       VirtualMachineScaleSetDataDisk = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetDataDisk
       VirtualMachineScaleSetUpdateStorageProfile = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdateStorageProfile
       VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
       VirtualMachineScaleSetPublicIPAddressConfiguration = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetPublicIPAddressConfiguration
       VirtualMachineScaleSetUpdatePublicIPAddressConfiguration = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdatePublicIPAddressConfiguration
-      MaintenanceRedeployStatus = Azure::Compute::Mgmt::V2018_06_01::Models::MaintenanceRedeployStatus
       RollingUpgradeRunningStatus = Azure::Compute::Mgmt::V2018_06_01::Models::RollingUpgradeRunningStatus
-      VirtualMachineHealthStatus = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineHealthStatus
+      MaintenanceRedeployStatus = Azure::Compute::Mgmt::V2018_06_01::Models::MaintenanceRedeployStatus
       VirtualMachineScaleSetNetworkConfigurationDnsSettings = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetNetworkConfigurationDnsSettings
+      RecoveryWalkResponse = Azure::Compute::Mgmt::V2018_06_01::Models::RecoveryWalkResponse
+      VirtualMachineHealthStatus = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineHealthStatus
       RunCommandListResult = Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandListResult
-      VirtualMachineScaleSetListOSUpgradeHistory = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetListOSUpgradeHistory
-      UpgradeOperationHistoricalStatusInfo = Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoricalStatusInfo
-      RunCommandInput = Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandInput
       VirtualMachineScaleSetUpdateNetworkProfile = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdateNetworkProfile
-      LogAnalyticsOutput = Azure::Compute::Mgmt::V2018_06_01::Models::LogAnalyticsOutput
-      UpgradeOperationHistoricalStatusInfoProperties = Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoricalStatusInfoProperties
-      LogAnalyticsInputBase = Azure::Compute::Mgmt::V2018_06_01::Models::LogAnalyticsInputBase
+      RunCommandInput = Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandInput
+      VirtualMachineScaleSetListOSUpgradeHistory = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetListOSUpgradeHistory
       VirtualMachineScaleSetExtensionListResult = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetExtensionListResult
+      LogAnalyticsOutput = Azure::Compute::Mgmt::V2018_06_01::Models::LogAnalyticsOutput
+      LogAnalyticsInputBase = Azure::Compute::Mgmt::V2018_06_01::Models::LogAnalyticsInputBase
       VirtualMachineScaleSetUpdateVMProfile = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdateVMProfile
-      RollingUpgradeProgressInfo = Azure::Compute::Mgmt::V2018_06_01::Models::RollingUpgradeProgressInfo
-      UpgradeOperationHistoryStatus = Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoryStatus
+      UpgradeOperationHistoricalStatusInfo = Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoricalStatusInfo
+      UpgradeOperationHistoricalStatusInfoProperties = Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoricalStatusInfoProperties
+      SubResourceReadOnly = Azure::Compute::Mgmt::V2018_06_01::Models::SubResourceReadOnly
       RunCommandDocumentBase = Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandDocumentBase
+      RollbackStatusInfo = Azure::Compute::Mgmt::V2018_06_01::Models::RollbackStatusInfo
+      UpgradeOperationHistoryStatus = Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoryStatus
       AvailabilitySetUpdate = Azure::Compute::Mgmt::V2018_06_01::Models::AvailabilitySetUpdate
       ManagedDiskParameters = Azure::Compute::Mgmt::V2018_06_01::Models::ManagedDiskParameters
       VirtualMachineUpdate = Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineUpdate
@@ -440,20 +440,14 @@ module Azure::Compute::Profiles::Latest
       def access_level
         Azure::Compute::Mgmt::V2018_04_01::Models::AccessLevel
       end
-      def image_list_result
-        Azure::Compute::Mgmt::V2018_06_01::Models::ImageListResult
-      end
       def compute_operation_value
         Azure::Compute::Mgmt::V2018_06_01::Models::ComputeOperationValue
       end
       def virtual_machine_scale_set_update_osprofile
         Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdateOSProfile
       end
-      def recovery_walk_response
-        Azure::Compute::Mgmt::V2018_06_01::Models::RecoveryWalkResponse
-      end
-      def sub_resource_read_only
-        Azure::Compute::Mgmt::V2018_06_01::Models::SubResourceReadOnly
+      def virtual_machine_scale_set_managed_disk_parameters
+        Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetManagedDiskParameters
       end
       def auto_osupgrade_policy
         Azure::Compute::Mgmt::V2018_06_01::Models::AutoOSUpgradePolicy
@@ -461,11 +455,11 @@ module Azure::Compute::Profiles::Latest
       def rolling_upgrade_policy
         Azure::Compute::Mgmt::V2018_06_01::Models::RollingUpgradePolicy
       end
-      def run_command_parameter_definition
-        Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandParameterDefinition
-      end
       def image_osdisk
         Azure::Compute::Mgmt::V2018_06_01::Models::ImageOSDisk
+      end
+      def run_command_parameter_definition
+        Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandParameterDefinition
       end
       def image_data_disk
         Azure::Compute::Mgmt::V2018_06_01::Models::ImageDataDisk
@@ -473,17 +467,17 @@ module Azure::Compute::Profiles::Latest
       def image_storage_profile
         Azure::Compute::Mgmt::V2018_06_01::Models::ImageStorageProfile
       end
+      def image_list_result
+        Azure::Compute::Mgmt::V2018_06_01::Models::ImageListResult
+      end
       def run_command_input_parameter
         Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandInputParameter
       end
       def compute_operation_list_result
         Azure::Compute::Mgmt::V2018_06_01::Models::ComputeOperationListResult
       end
-      def rollback_status_info
-        Azure::Compute::Mgmt::V2018_06_01::Models::RollbackStatusInfo
-      end
-      def virtual_machine_scale_set_managed_disk_parameters
-        Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetManagedDiskParameters
+      def rolling_upgrade_progress_info
+        Azure::Compute::Mgmt::V2018_06_01::Models::RollingUpgradeProgressInfo
       end
       def virtual_machine_scale_set_update_osdisk
         Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdateOSDisk
@@ -503,56 +497,62 @@ module Azure::Compute::Profiles::Latest
       def virtual_machine_scale_set_update_public_ipaddress_configuration
         Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdatePublicIPAddressConfiguration
       end
-      def maintenance_redeploy_status
-        Azure::Compute::Mgmt::V2018_06_01::Models::MaintenanceRedeployStatus
-      end
       def rolling_upgrade_running_status
         Azure::Compute::Mgmt::V2018_06_01::Models::RollingUpgradeRunningStatus
       end
-      def virtual_machine_health_status
-        Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineHealthStatus
+      def maintenance_redeploy_status
+        Azure::Compute::Mgmt::V2018_06_01::Models::MaintenanceRedeployStatus
       end
       def virtual_machine_scale_set_network_configuration_dns_settings
         Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetNetworkConfigurationDnsSettings
       end
+      def recovery_walk_response
+        Azure::Compute::Mgmt::V2018_06_01::Models::RecoveryWalkResponse
+      end
+      def virtual_machine_health_status
+        Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineHealthStatus
+      end
       def run_command_list_result
         Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandListResult
-      end
-      def virtual_machine_scale_set_list_osupgrade_history
-        Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetListOSUpgradeHistory
-      end
-      def upgrade_operation_historical_status_info
-        Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoricalStatusInfo
-      end
-      def run_command_input
-        Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandInput
       end
       def virtual_machine_scale_set_update_network_profile
         Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdateNetworkProfile
       end
-      def log_analytics_output
-        Azure::Compute::Mgmt::V2018_06_01::Models::LogAnalyticsOutput
+      def run_command_input
+        Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandInput
       end
-      def upgrade_operation_historical_status_info_properties
-        Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoricalStatusInfoProperties
-      end
-      def log_analytics_input_base
-        Azure::Compute::Mgmt::V2018_06_01::Models::LogAnalyticsInputBase
+      def virtual_machine_scale_set_list_osupgrade_history
+        Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetListOSUpgradeHistory
       end
       def virtual_machine_scale_set_extension_list_result
         Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetExtensionListResult
       end
+      def log_analytics_output
+        Azure::Compute::Mgmt::V2018_06_01::Models::LogAnalyticsOutput
+      end
+      def log_analytics_input_base
+        Azure::Compute::Mgmt::V2018_06_01::Models::LogAnalyticsInputBase
+      end
       def virtual_machine_scale_set_update_vmprofile
         Azure::Compute::Mgmt::V2018_06_01::Models::VirtualMachineScaleSetUpdateVMProfile
       end
-      def rolling_upgrade_progress_info
-        Azure::Compute::Mgmt::V2018_06_01::Models::RollingUpgradeProgressInfo
+      def upgrade_operation_historical_status_info
+        Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoricalStatusInfo
       end
-      def upgrade_operation_history_status
-        Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoryStatus
+      def upgrade_operation_historical_status_info_properties
+        Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoricalStatusInfoProperties
+      end
+      def sub_resource_read_only
+        Azure::Compute::Mgmt::V2018_06_01::Models::SubResourceReadOnly
       end
       def run_command_document_base
         Azure::Compute::Mgmt::V2018_06_01::Models::RunCommandDocumentBase
+      end
+      def rollback_status_info
+        Azure::Compute::Mgmt::V2018_06_01::Models::RollbackStatusInfo
+      end
+      def upgrade_operation_history_status
+        Azure::Compute::Mgmt::V2018_06_01::Models::UpgradeOperationHistoryStatus
       end
       def availability_set_update
         Azure::Compute::Mgmt::V2018_06_01::Models::AvailabilitySetUpdate

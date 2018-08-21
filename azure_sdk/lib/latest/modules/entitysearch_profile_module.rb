@@ -28,13 +28,13 @@ module Azure::Profiles::Latest
       EntitiesEntityPresentationInfo = Azure::CognitiveServices::EntitySearch::V1_0::Models::EntitiesEntityPresentationInfo
       ImageObject = Azure::CognitiveServices::EntitySearch::V1_0::Models::ImageObject
       Entities = Azure::CognitiveServices::EntitySearch::V1_0::Models::Entities
-      Places = Azure::CognitiveServices::EntitySearch::V1_0::Models::Places
       PostalAddress = Azure::CognitiveServices::EntitySearch::V1_0::Models::PostalAddress
-      Organization = Azure::CognitiveServices::EntitySearch::V1_0::Models::Organization
-      Intangible = Azure::CognitiveServices::EntitySearch::V1_0::Models::Intangible
       Place = Azure::CognitiveServices::EntitySearch::V1_0::Models::Place
+      Places = Azure::CognitiveServices::EntitySearch::V1_0::Models::Places
+      Organization = Azure::CognitiveServices::EntitySearch::V1_0::Models::Organization
       ContractualRulesAttribution = Azure::CognitiveServices::EntitySearch::V1_0::Models::ContractualRulesAttribution
       MediaObject = Azure::CognitiveServices::EntitySearch::V1_0::Models::MediaObject
+      Intangible = Azure::CognitiveServices::EntitySearch::V1_0::Models::Intangible
       CivicStructure = Azure::CognitiveServices::EntitySearch::V1_0::Models::CivicStructure
       LocalBusiness = Azure::CognitiveServices::EntitySearch::V1_0::Models::LocalBusiness
       TouristAttraction = Azure::CognitiveServices::EntitySearch::V1_0::Models::TouristAttraction
@@ -144,26 +144,26 @@ module Azure::Profiles::Latest
         def entities
           Azure::CognitiveServices::EntitySearch::V1_0::Models::Entities
         end
-        def places
-          Azure::CognitiveServices::EntitySearch::V1_0::Models::Places
-        end
         def postal_address
           Azure::CognitiveServices::EntitySearch::V1_0::Models::PostalAddress
         end
-        def organization
-          Azure::CognitiveServices::EntitySearch::V1_0::Models::Organization
-        end
-        def intangible
-          Azure::CognitiveServices::EntitySearch::V1_0::Models::Intangible
-        end
         def place
           Azure::CognitiveServices::EntitySearch::V1_0::Models::Place
+        end
+        def places
+          Azure::CognitiveServices::EntitySearch::V1_0::Models::Places
+        end
+        def organization
+          Azure::CognitiveServices::EntitySearch::V1_0::Models::Organization
         end
         def contractual_rules_attribution
           Azure::CognitiveServices::EntitySearch::V1_0::Models::ContractualRulesAttribution
         end
         def media_object
           Azure::CognitiveServices::EntitySearch::V1_0::Models::MediaObject
+        end
+        def intangible
+          Azure::CognitiveServices::EntitySearch::V1_0::Models::Intangible
         end
         def civic_structure
           Azure::CognitiveServices::EntitySearch::V1_0::Models::CivicStructure
