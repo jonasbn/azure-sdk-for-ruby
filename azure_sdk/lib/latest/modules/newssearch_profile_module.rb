@@ -18,14 +18,14 @@ module Azure::Profiles::Latest
       News = Azure::CognitiveServices::NewsSearch::V1_0::Models::News
       NewsTopic = Azure::CognitiveServices::NewsSearch::V1_0::Models::NewsTopic
       Article = Azure::CognitiveServices::NewsSearch::V1_0::Models::Article
-      TrendingTopics = Azure::CognitiveServices::NewsSearch::V1_0::Models::TrendingTopics
+      Response = Azure::CognitiveServices::NewsSearch::V1_0::Models::Response
       VideoObject = Azure::CognitiveServices::NewsSearch::V1_0::Models::VideoObject
       Thing = Azure::CognitiveServices::NewsSearch::V1_0::Models::Thing
-      CreativeWork = Azure::CognitiveServices::NewsSearch::V1_0::Models::CreativeWork
+      TrendingTopics = Azure::CognitiveServices::NewsSearch::V1_0::Models::TrendingTopics
       ErrorCode = Azure::CognitiveServices::NewsSearch::V1_0::Models::ErrorCode
       ErrorSubCode = Azure::CognitiveServices::NewsSearch::V1_0::Models::ErrorSubCode
       SafeSearch = Azure::CognitiveServices::NewsSearch::V1_0::Models::SafeSearch
-      Response = Azure::CognitiveServices::NewsSearch::V1_0::Models::Response
+      CreativeWork = Azure::CognitiveServices::NewsSearch::V1_0::Models::CreativeWork
       TextFormat = Azure::CognitiveServices::NewsSearch::V1_0::Models::TextFormat
       ImageObject = Azure::CognitiveServices::NewsSearch::V1_0::Models::ImageObject
       Organization = Azure::CognitiveServices::NewsSearch::V1_0::Models::Organization
@@ -92,8 +92,8 @@ module Azure::Profiles::Latest
         def article
           Azure::CognitiveServices::NewsSearch::V1_0::Models::Article
         end
-        def trending_topics
-          Azure::CognitiveServices::NewsSearch::V1_0::Models::TrendingTopics
+        def response
+          Azure::CognitiveServices::NewsSearch::V1_0::Models::Response
         end
         def video_object
           Azure::CognitiveServices::NewsSearch::V1_0::Models::VideoObject
@@ -101,8 +101,8 @@ module Azure::Profiles::Latest
         def thing
           Azure::CognitiveServices::NewsSearch::V1_0::Models::Thing
         end
-        def creative_work
-          Azure::CognitiveServices::NewsSearch::V1_0::Models::CreativeWork
+        def trending_topics
+          Azure::CognitiveServices::NewsSearch::V1_0::Models::TrendingTopics
         end
         def error_code
           Azure::CognitiveServices::NewsSearch::V1_0::Models::ErrorCode
@@ -113,8 +113,8 @@ module Azure::Profiles::Latest
         def safe_search
           Azure::CognitiveServices::NewsSearch::V1_0::Models::SafeSearch
         end
-        def response
-          Azure::CognitiveServices::NewsSearch::V1_0::Models::Response
+        def creative_work
+          Azure::CognitiveServices::NewsSearch::V1_0::Models::CreativeWork
         end
         def text_format
           Azure::CognitiveServices::NewsSearch::V1_0::Models::TextFormat
