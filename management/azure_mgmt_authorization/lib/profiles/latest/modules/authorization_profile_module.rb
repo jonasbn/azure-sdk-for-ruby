@@ -13,8 +13,9 @@ module Azure::Authorization::Profiles::Latest
     RoleDefinitions = Azure::Authorization::Mgmt::V2018_01_01_preview::RoleDefinitions
 
     module Models
-      ClassicAdministratorListResult = Azure::Authorization::Mgmt::V2015_06_01_preview::Models::ClassicAdministratorListResult
       ClassicAdministrator = Azure::Authorization::Mgmt::V2015_06_01_preview::Models::ClassicAdministrator
+      ClassicAdministratorListResult = Azure::Authorization::Mgmt::V2015_06_01_preview::Models::ClassicAdministratorListResult
+      Permission = Azure::Authorization::Mgmt::V2018_01_01_preview::Models::Permission
       RoleDefinitionFilter = Azure::Authorization::Mgmt::V2018_01_01_preview::Models::RoleDefinitionFilter
       RoleDefinition = Azure::Authorization::Mgmt::V2018_01_01_preview::Models::RoleDefinition
       ResourceType = Azure::Authorization::Mgmt::V2018_01_01_preview::Models::ResourceType
@@ -27,7 +28,6 @@ module Azure::Authorization::Profiles::Latest
       RoleAssignmentListResult = Azure::Authorization::Mgmt::V2018_01_01_preview::Models::RoleAssignmentListResult
       ProviderOperation = Azure::Authorization::Mgmt::V2018_01_01_preview::Models::ProviderOperation
       RoleAssignmentCreateParameters = Azure::Authorization::Mgmt::V2018_01_01_preview::Models::RoleAssignmentCreateParameters
-      Permission = Azure::Authorization::Mgmt::V2018_01_01_preview::Models::Permission
     end
 
     #
@@ -87,11 +87,14 @@ module Azure::Authorization::Profiles::Latest
     end
 
     class ModelClasses
+      def classic_administrator
+        Azure::Authorization::Mgmt::V2015_06_01_preview::Models::ClassicAdministrator
+      end
       def classic_administrator_list_result
         Azure::Authorization::Mgmt::V2015_06_01_preview::Models::ClassicAdministratorListResult
       end
-      def classic_administrator
-        Azure::Authorization::Mgmt::V2015_06_01_preview::Models::ClassicAdministrator
+      def permission
+        Azure::Authorization::Mgmt::V2018_01_01_preview::Models::Permission
       end
       def role_definition_filter
         Azure::Authorization::Mgmt::V2018_01_01_preview::Models::RoleDefinitionFilter
@@ -128,9 +131,6 @@ module Azure::Authorization::Profiles::Latest
       end
       def role_assignment_create_parameters
         Azure::Authorization::Mgmt::V2018_01_01_preview::Models::RoleAssignmentCreateParameters
-      end
-      def permission
-        Azure::Authorization::Mgmt::V2018_01_01_preview::Models::Permission
       end
     end
   end
