@@ -7,24 +7,23 @@ require 'azure_mgmt_web'
 module Azure::Profiles::Latest
   module Web
     module Mgmt
+      Diagnostics = Azure::Web::Mgmt::V2018_02_01::Diagnostics
+      Domains = Azure::Web::Mgmt::V2018_02_01::Domains
       AppServiceCertificateOrders = Azure::Web::Mgmt::V2018_02_01::AppServiceCertificateOrders
       CertificateRegistrationProvider = Azure::Web::Mgmt::V2018_02_01::CertificateRegistrationProvider
-      Domains = Azure::Web::Mgmt::V2018_02_01::Domains
       TopLevelDomains = Azure::Web::Mgmt::V2018_02_01::TopLevelDomains
       DomainRegistrationProvider = Azure::Web::Mgmt::V2018_02_01::DomainRegistrationProvider
-      Certificates = Azure::Web::Mgmt::V2018_02_01::Certificates
       DeletedWebApps = Azure::Web::Mgmt::V2018_02_01::DeletedWebApps
-      Diagnostics = Azure::Web::Mgmt::V2018_02_01::Diagnostics
-      Provider = Azure::Web::Mgmt::V2018_02_01::Provider
+      Certificates = Azure::Web::Mgmt::V2018_02_01::Certificates
       Recommendations = Azure::Web::Mgmt::V2018_02_01::Recommendations
       WebApps = Azure::Web::Mgmt::V2018_02_01::WebApps
       AppServiceEnvironments = Azure::Web::Mgmt::V2018_02_01::AppServiceEnvironments
       AppServicePlans = Azure::Web::Mgmt::V2018_02_01::AppServicePlans
+      Provider = Azure::Web::Mgmt::V2018_02_01::Provider
 
       module Models
         DiagnosticDetectorCollection = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticDetectorCollection
         AppServiceCertificate = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificate
-        Operation = Azure::Web::Mgmt::V2018_02_01::Models::Operation
         AppServiceCertificateCollection = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificateCollection
         ResourceMetricName = Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricName
         DeploymentCollection = Azure::Web::Mgmt::V2018_02_01::Models::DeploymentCollection
@@ -34,6 +33,7 @@ module Azure::Profiles::Latest
         ProcessInfoCollection = Azure::Web::Mgmt::V2018_02_01::Models::ProcessInfoCollection
         VirtualIPMapping = Azure::Web::Mgmt::V2018_02_01::Models::VirtualIPMapping
         PerfMonResponse = Azure::Web::Mgmt::V2018_02_01::Models::PerfMonResponse
+        Operation = Azure::Web::Mgmt::V2018_02_01::Models::Operation
         StampCapacity = Azure::Web::Mgmt::V2018_02_01::Models::StampCapacity
         SiteSeal = Azure::Web::Mgmt::V2018_02_01::Models::SiteSeal
         NetworkAccessControlEntry = Azure::Web::Mgmt::V2018_02_01::Models::NetworkAccessControlEntry
@@ -42,28 +42,26 @@ module Azure::Profiles::Latest
         ProcessThreadInfoCollection = Azure::Web::Mgmt::V2018_02_01::Models::ProcessThreadInfoCollection
         AppServicePlanCollection = Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlanCollection
         SiteCloneabilityCriterion = Azure::Web::Mgmt::V2018_02_01::Models::SiteCloneabilityCriterion
-        LocalizableString = Azure::Web::Mgmt::V2018_02_01::Models::LocalizableString
         SiteCloneability = Azure::Web::Mgmt::V2018_02_01::Models::SiteCloneability
-        CsmUsageQuota = Azure::Web::Mgmt::V2018_02_01::Models::CsmUsageQuota
         MSDeployLogEntry = Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLogEntry
         CsmUsageQuotaCollection = Azure::Web::Mgmt::V2018_02_01::Models::CsmUsageQuotaCollection
+        CsmUsageQuota = Azure::Web::Mgmt::V2018_02_01::Models::CsmUsageQuota
         HttpLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::HttpLogsConfig
-        DeletedSite = Azure::Web::Mgmt::V2018_02_01::Models::DeletedSite
-        ManagedServiceIdentity = Azure::Web::Mgmt::V2018_02_01::Models::ManagedServiceIdentity
         ErrorEntity = Azure::Web::Mgmt::V2018_02_01::Models::ErrorEntity
         CloningInfo = Azure::Web::Mgmt::V2018_02_01::Models::CloningInfo
+        DeletedSite = Azure::Web::Mgmt::V2018_02_01::Models::DeletedSite
         IdentifierCollection = Azure::Web::Mgmt::V2018_02_01::Models::IdentifierCollection
-        IpSecurityRestriction = Azure::Web::Mgmt::V2018_02_01::Models::IpSecurityRestriction
         CertificateDetails = Azure::Web::Mgmt::V2018_02_01::Models::CertificateDetails
         CorsSettings = Azure::Web::Mgmt::V2018_02_01::Models::CorsSettings
+        IpSecurityRestriction = Azure::Web::Mgmt::V2018_02_01::Models::IpSecurityRestriction
         SnapshotRecoverySource = Azure::Web::Mgmt::V2018_02_01::Models::SnapshotRecoverySource
-        AutoHealActions = Azure::Web::Mgmt::V2018_02_01::Models::AutoHealActions
         ResourceMetricProperty = Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricProperty
         StatusCodesBasedTrigger = Azure::Web::Mgmt::V2018_02_01::Models::StatusCodesBasedTrigger
+        AutoHealActions = Azure::Web::Mgmt::V2018_02_01::Models::AutoHealActions
         ResourceMetricValue = Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricValue
-        AutoHealTriggers = Azure::Web::Mgmt::V2018_02_01::Models::AutoHealTriggers
         ResourceMetric = Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetric
         SiteLimits = Azure::Web::Mgmt::V2018_02_01::Models::SiteLimits
+        AutoHealTriggers = Azure::Web::Mgmt::V2018_02_01::Models::AutoHealTriggers
         ResourceMetricCollection = Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricCollection
         Experiments = Azure::Web::Mgmt::V2018_02_01::Models::Experiments
         ResourceMetricDefinitionCollection = Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricDefinitionCollection
@@ -79,20 +77,15 @@ module Azure::Profiles::Latest
         AbnormalTimePeriod = Azure::Web::Mgmt::V2018_02_01::Models::AbnormalTimePeriod
         SkuDescription = Azure::Web::Mgmt::V2018_02_01::Models::SkuDescription
         TriggeredJobHistoryCollection = Azure::Web::Mgmt::V2018_02_01::Models::TriggeredJobHistoryCollection
-        Resource = Azure::Web::Mgmt::V2018_02_01::Models::Resource
         DiagnosticMetricSample = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticMetricSample
         DefaultErrorResponseError = Azure::Web::Mgmt::V2018_02_01::Models::DefaultErrorResponseError
         DiagnosticMetricSet = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticMetricSet
         NameIdentifier = Azure::Web::Mgmt::V2018_02_01::Models::NameIdentifier
-        DataSource = Azure::Web::Mgmt::V2018_02_01::Models::DataSource
-        MetricAvailability = Azure::Web::Mgmt::V2018_02_01::Models::MetricAvailability
         ResponseMetaData = Azure::Web::Mgmt::V2018_02_01::Models::ResponseMetaData
-        MetricSpecification = Azure::Web::Mgmt::V2018_02_01::Models::MetricSpecification
-        AnalysisData = Azure::Web::Mgmt::V2018_02_01::Models::AnalysisData
         CsmOperationDescriptionProperties = Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDescriptionProperties
         TriggeredWebJobCollection = Azure::Web::Mgmt::V2018_02_01::Models::TriggeredWebJobCollection
-        CsmOperationDescription = Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDescription
-        DataTableResponseColumn = Azure::Web::Mgmt::V2018_02_01::Models::DataTableResponseColumn
+        AnalysisData = Azure::Web::Mgmt::V2018_02_01::Models::AnalysisData
+        DataSource = Azure::Web::Mgmt::V2018_02_01::Models::DataSource
         Address = Azure::Web::Mgmt::V2018_02_01::Models::Address
         DataTableResponseObject = Azure::Web::Mgmt::V2018_02_01::Models::DataTableResponseObject
         HostName = Azure::Web::Mgmt::V2018_02_01::Models::HostName
@@ -112,249 +105,256 @@ module Azure::Profiles::Latest
         TopLevelDomainAgreementOption = Azure::Web::Mgmt::V2018_02_01::Models::TopLevelDomainAgreementOption
         ContinuousWebJobCollection = Azure::Web::Mgmt::V2018_02_01::Models::ContinuousWebJobCollection
         EnabledConfig = Azure::Web::Mgmt::V2018_02_01::Models::EnabledConfig
-        DiagnosticCategoryCollection = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticCategoryCollection
+        CsmOperationDescription = Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDescription
+        DataTableResponseColumn = Azure::Web::Mgmt::V2018_02_01::Models::DataTableResponseColumn
         AppServiceCertificateOrderCollection = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificateOrderCollection
-        PrivateAccessVirtualNetwork = Azure::Web::Mgmt::V2018_02_01::Models::PrivateAccessVirtualNetwork
-        WebAppInstanceCollection = Azure::Web::Mgmt::V2018_02_01::Models::WebAppInstanceCollection
+        MetricSpecification = Azure::Web::Mgmt::V2018_02_01::Models::MetricSpecification
         PerfMonSet = Azure::Web::Mgmt::V2018_02_01::Models::PerfMonSet
-        ProcessModuleInfoCollection = Azure::Web::Mgmt::V2018_02_01::Models::ProcessModuleInfoCollection
-        StackMinorVersion = Azure::Web::Mgmt::V2018_02_01::Models::StackMinorVersion
+        PrivateAccessVirtualNetwork = Azure::Web::Mgmt::V2018_02_01::Models::PrivateAccessVirtualNetwork
+        DiagnosticCategoryCollection = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticCategoryCollection
         ResourceMetricAvailability = Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricAvailability
-        StackMajorVersion = Azure::Web::Mgmt::V2018_02_01::Models::StackMajorVersion
-        SiteConfigurationSnapshotInfoCollection = Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigurationSnapshotInfoCollection
+        ProcessModuleInfoCollection = Azure::Web::Mgmt::V2018_02_01::Models::ProcessModuleInfoCollection
+        WebAppInstanceCollection = Azure::Web::Mgmt::V2018_02_01::Models::WebAppInstanceCollection
         ApplicationStack = Azure::Web::Mgmt::V2018_02_01::Models::ApplicationStack
-        SlotSwapStatus = Azure::Web::Mgmt::V2018_02_01::Models::SlotSwapStatus
-        ApplicationStackCollection = Azure::Web::Mgmt::V2018_02_01::Models::ApplicationStackCollection
+        StackMajorVersion = Azure::Web::Mgmt::V2018_02_01::Models::StackMajorVersion
+        StackMinorVersion = Azure::Web::Mgmt::V2018_02_01::Models::StackMinorVersion
         ApiDefinitionInfo = Azure::Web::Mgmt::V2018_02_01::Models::ApiDefinitionInfo
-        ResourceCollection = Azure::Web::Mgmt::V2018_02_01::Models::ResourceCollection
-        SlowRequestsBasedTrigger = Azure::Web::Mgmt::V2018_02_01::Models::SlowRequestsBasedTrigger
+        SlotSwapStatus = Azure::Web::Mgmt::V2018_02_01::Models::SlotSwapStatus
+        SiteConfigurationSnapshotInfoCollection = Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigurationSnapshotInfoCollection
         RecommendationCollection = Azure::Web::Mgmt::V2018_02_01::Models::RecommendationCollection
-        AutoHealRules = Azure::Web::Mgmt::V2018_02_01::Models::AutoHealRules
-        HybridConnectionCollection = Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionCollection
+        ResourceCollection = Azure::Web::Mgmt::V2018_02_01::Models::ResourceCollection
+        ApplicationStackCollection = Azure::Web::Mgmt::V2018_02_01::Models::ApplicationStackCollection
         VirtualDirectory = Azure::Web::Mgmt::V2018_02_01::Models::VirtualDirectory
-        WorkerPoolCollection = Azure::Web::Mgmt::V2018_02_01::Models::WorkerPoolCollection
-        ConnStringInfo = Azure::Web::Mgmt::V2018_02_01::Models::ConnStringInfo
+        AutoHealRules = Azure::Web::Mgmt::V2018_02_01::Models::AutoHealRules
+        SlowRequestsBasedTrigger = Azure::Web::Mgmt::V2018_02_01::Models::SlowRequestsBasedTrigger
         BillingMeterCollection = Azure::Web::Mgmt::V2018_02_01::Models::BillingMeterCollection
-        HostNameBindingCollection = Azure::Web::Mgmt::V2018_02_01::Models::HostNameBindingCollection
-        CsmMoveResourceEnvelope = Azure::Web::Mgmt::V2018_02_01::Models::CsmMoveResourceEnvelope
+        WorkerPoolCollection = Azure::Web::Mgmt::V2018_02_01::Models::WorkerPoolCollection
+        HybridConnectionCollection = Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionCollection
         SiteExtensionInfoCollection = Azure::Web::Mgmt::V2018_02_01::Models::SiteExtensionInfoCollection
-        UsageCollection = Azure::Web::Mgmt::V2018_02_01::Models::UsageCollection
-        DefaultErrorResponse = Azure::Web::Mgmt::V2018_02_01::Models::DefaultErrorResponse
+        HostNameBindingCollection = Azure::Web::Mgmt::V2018_02_01::Models::HostNameBindingCollection
+        ConnStringInfo = Azure::Web::Mgmt::V2018_02_01::Models::ConnStringInfo
         HostingEnvironmentDeploymentInfo = Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentDeploymentInfo
-        Dimension = Azure::Web::Mgmt::V2018_02_01::Models::Dimension
-        DeploymentLocations = Azure::Web::Mgmt::V2018_02_01::Models::DeploymentLocations
-        CsmOperationDisplay = Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDisplay
+        UsageCollection = Azure::Web::Mgmt::V2018_02_01::Models::UsageCollection
+        CsmMoveResourceEnvelope = Azure::Web::Mgmt::V2018_02_01::Models::CsmMoveResourceEnvelope
         GeoRegionCollection = Azure::Web::Mgmt::V2018_02_01::Models::GeoRegionCollection
-        Contact = Azure::Web::Mgmt::V2018_02_01::Models::Contact
-        GlobalCsmSkuDescription = Azure::Web::Mgmt::V2018_02_01::Models::GlobalCsmSkuDescription
-        DomainAvailablilityCheckResult = Azure::Web::Mgmt::V2018_02_01::Models::DomainAvailablilityCheckResult
+        DeploymentLocations = Azure::Web::Mgmt::V2018_02_01::Models::DeploymentLocations
+        DefaultErrorResponse = Azure::Web::Mgmt::V2018_02_01::Models::DefaultErrorResponse
         StampCapacityCollection = Azure::Web::Mgmt::V2018_02_01::Models::StampCapacityCollection
-        DomainOwnershipIdentifierCollection = Azure::Web::Mgmt::V2018_02_01::Models::DomainOwnershipIdentifierCollection
+        GlobalCsmSkuDescription = Azure::Web::Mgmt::V2018_02_01::Models::GlobalCsmSkuDescription
+        CsmOperationDisplay = Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDisplay
         PremierAddOnOfferCollection = Azure::Web::Mgmt::V2018_02_01::Models::PremierAddOnOfferCollection
-        TldLegalAgreement = Azure::Web::Mgmt::V2018_02_01::Models::TldLegalAgreement
+        DomainOwnershipIdentifierCollection = Azure::Web::Mgmt::V2018_02_01::Models::DomainOwnershipIdentifierCollection
+        DomainAvailablilityCheckResult = Azure::Web::Mgmt::V2018_02_01::Models::DomainAvailablilityCheckResult
+        Contact = Azure::Web::Mgmt::V2018_02_01::Models::Contact
         ResourceNameAvailability = Azure::Web::Mgmt::V2018_02_01::Models::ResourceNameAvailability
+        PerfMonCounterCollection = Azure::Web::Mgmt::V2018_02_01::Models::PerfMonCounterCollection
+        Dimension = Azure::Web::Mgmt::V2018_02_01::Models::Dimension
+        PublicCertificateCollection = Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificateCollection
         TopLevelDomainCollection = Azure::Web::Mgmt::V2018_02_01::Models::TopLevelDomainCollection
         ResourceNameAvailabilityRequest = Azure::Web::Mgmt::V2018_02_01::Models::ResourceNameAvailabilityRequest
-        PerfMonCounterCollection = Azure::Web::Mgmt::V2018_02_01::Models::PerfMonCounterCollection
+        TldLegalAgreement = Azure::Web::Mgmt::V2018_02_01::Models::TldLegalAgreement
         SkuInfos = Azure::Web::Mgmt::V2018_02_01::Models::SkuInfos
-        PublicCertificateCollection = Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificateCollection
-        SkuInfoCollection = Azure::Web::Mgmt::V2018_02_01::Models::SkuInfoCollection
-        ProxyOnlyResource = Azure::Web::Mgmt::V2018_02_01::Models::ProxyOnlyResource
-        SourceControlCollection = Azure::Web::Mgmt::V2018_02_01::Models::SourceControlCollection
         AutoHealCustomAction = Azure::Web::Mgmt::V2018_02_01::Models::AutoHealCustomAction
         ValidateRequest = Azure::Web::Mgmt::V2018_02_01::Models::ValidateRequest
-        RampUpRule = Azure::Web::Mgmt::V2018_02_01::Models::RampUpRule
+        SourceControlCollection = Azure::Web::Mgmt::V2018_02_01::Models::SourceControlCollection
         ValidateResponseError = Azure::Web::Mgmt::V2018_02_01::Models::ValidateResponseError
         SiteConfig = Azure::Web::Mgmt::V2018_02_01::Models::SiteConfig
-        ValidateResponse = Azure::Web::Mgmt::V2018_02_01::Models::ValidateResponse
-        DefaultErrorResponseErrorDetailsItem = Azure::Web::Mgmt::V2018_02_01::Models::DefaultErrorResponseErrorDetailsItem
-        SkuInfo = Azure::Web::Mgmt::V2018_02_01::Models::SkuInfo
-        ServiceSpecification = Azure::Web::Mgmt::V2018_02_01::Models::ServiceSpecification
+        SkuInfoCollection = Azure::Web::Mgmt::V2018_02_01::Models::SkuInfoCollection
         MetricAvailabilily = Azure::Web::Mgmt::V2018_02_01::Models::MetricAvailabilily
         DomainPurchaseConsent = Azure::Web::Mgmt::V2018_02_01::Models::DomainPurchaseConsent
-        HostingEnvironmentDiagnostics = Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentDiagnostics
-        DomainRecommendationSearchParameters = Azure::Web::Mgmt::V2018_02_01::Models::DomainRecommendationSearchParameters
-        FileSystemApplicationLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::FileSystemApplicationLogsConfig
-        CertificateCollection = Azure::Web::Mgmt::V2018_02_01::Models::CertificateCollection
+        ValidateResponse = Azure::Web::Mgmt::V2018_02_01::Models::ValidateResponse
+        RampUpRule = Azure::Web::Mgmt::V2018_02_01::Models::RampUpRule
+        SkuInfo = Azure::Web::Mgmt::V2018_02_01::Models::SkuInfo
         AzureTableStorageApplicationLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::AzureTableStorageApplicationLogsConfig
-        SiteConfigResourceCollection = Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigResourceCollection
-        AzureBlobStorageApplicationLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::AzureBlobStorageApplicationLogsConfig
-        RequestsBasedTrigger = Azure::Web::Mgmt::V2018_02_01::Models::RequestsBasedTrigger
+        FileSystemApplicationLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::FileSystemApplicationLogsConfig
+        DefaultErrorResponseErrorDetailsItem = Azure::Web::Mgmt::V2018_02_01::Models::DefaultErrorResponseErrorDetailsItem
+        DomainRecommendationSearchParameters = Azure::Web::Mgmt::V2018_02_01::Models::DomainRecommendationSearchParameters
         ApplicationLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::ApplicationLogsConfig
-        SkuCapacity = Azure::Web::Mgmt::V2018_02_01::Models::SkuCapacity
-        AzureBlobStorageHttpLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::AzureBlobStorageHttpLogsConfig
+        RequestsBasedTrigger = Azure::Web::Mgmt::V2018_02_01::Models::RequestsBasedTrigger
+        ServiceSpecification = Azure::Web::Mgmt::V2018_02_01::Models::ServiceSpecification
         CsmOperationCollection = Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationCollection
         DatabaseBackupSetting = Azure::Web::Mgmt::V2018_02_01::Models::DatabaseBackupSetting
         FileSystemHttpLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::FileSystemHttpLogsConfig
-        AppServiceEnvironmentCollection = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentCollection
-        HostingEnvironmentProfile = Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentProfile
+        SiteConfigResourceCollection = Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigResourceCollection
+        HostingEnvironmentDiagnostics = Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentDiagnostics
         BackupItemCollection = Azure::Web::Mgmt::V2018_02_01::Models::BackupItemCollection
-        LogSpecification = Azure::Web::Mgmt::V2018_02_01::Models::LogSpecification
-        BackupSchedule = Azure::Web::Mgmt::V2018_02_01::Models::BackupSchedule
-        SiteSealRequest = Azure::Web::Mgmt::V2018_02_01::Models::SiteSealRequest
-        AddressResponse = Azure::Web::Mgmt::V2018_02_01::Models::AddressResponse
+        HostingEnvironmentProfile = Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentProfile
+        SkuCapacity = Azure::Web::Mgmt::V2018_02_01::Models::SkuCapacity
+        AzureBlobStorageHttpLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::AzureBlobStorageHttpLogsConfig
+        AzureBlobStorageApplicationLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::AzureBlobStorageApplicationLogsConfig
         DomainControlCenterSsoRequest = Azure::Web::Mgmt::V2018_02_01::Models::DomainControlCenterSsoRequest
+        SiteSealRequest = Azure::Web::Mgmt::V2018_02_01::Models::SiteSealRequest
+        AppServiceEnvironmentCollection = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentCollection
+        LogSpecification = Azure::Web::Mgmt::V2018_02_01::Models::LogSpecification
         ConnStringValueTypePair = Azure::Web::Mgmt::V2018_02_01::Models::ConnStringValueTypePair
         HandlerMapping = Azure::Web::Mgmt::V2018_02_01::Models::HandlerMapping
-        WebJobCollection = Azure::Web::Mgmt::V2018_02_01::Models::WebJobCollection
+        AddressResponse = Azure::Web::Mgmt::V2018_02_01::Models::AddressResponse
         AppServiceCertificateResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificateResource
         AppServiceCertificateOrder = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificateOrder
         AppServiceCertificateOrderPatchResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificateOrderPatchResource
-        AppServiceCertificatePatchResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificatePatchResource
+        WebJobCollection = Azure::Web::Mgmt::V2018_02_01::Models::WebJobCollection
         CertificateEmail = Azure::Web::Mgmt::V2018_02_01::Models::CertificateEmail
         CertificateOrderAction = Azure::Web::Mgmt::V2018_02_01::Models::CertificateOrderAction
         ReissueCertificateOrderRequest = Azure::Web::Mgmt::V2018_02_01::Models::ReissueCertificateOrderRequest
-        RenewCertificateOrderRequest = Azure::Web::Mgmt::V2018_02_01::Models::RenewCertificateOrderRequest
+        BackupSchedule = Azure::Web::Mgmt::V2018_02_01::Models::BackupSchedule
         VnetRoute = Azure::Web::Mgmt::V2018_02_01::Models::VnetRoute
         VnetInfo = Azure::Web::Mgmt::V2018_02_01::Models::VnetInfo
         VnetGateway = Azure::Web::Mgmt::V2018_02_01::Models::VnetGateway
-        User = Azure::Web::Mgmt::V2018_02_01::Models::User
-        Snapshot = Azure::Web::Mgmt::V2018_02_01::Models::Snapshot
+        RenewCertificateOrderRequest = Azure::Web::Mgmt::V2018_02_01::Models::RenewCertificateOrderRequest
+        AppServiceCertificatePatchResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificatePatchResource
+        HybridConnectionKey = Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionKey
+        Site = Azure::Web::Mgmt::V2018_02_01::Models::Site
         ResourceMetricDefinition = Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricDefinition
         PushSettings = Azure::Web::Mgmt::V2018_02_01::Models::PushSettings
-        Identifier = Azure::Web::Mgmt::V2018_02_01::Models::Identifier
-        HybridConnectionKey = Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionKey
-        HybridConnection = Azure::Web::Mgmt::V2018_02_01::Models::HybridConnection
-        Site = Azure::Web::Mgmt::V2018_02_01::Models::Site
-        AppServicePlan = Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlan
-        Domain = Azure::Web::Mgmt::V2018_02_01::Models::Domain
-        DomainOwnershipIdentifier = Azure::Web::Mgmt::V2018_02_01::Models::DomainOwnershipIdentifier
         DomainPatchResource = Azure::Web::Mgmt::V2018_02_01::Models::DomainPatchResource
         TopLevelDomain = Azure::Web::Mgmt::V2018_02_01::Models::TopLevelDomain
-        Certificate = Azure::Web::Mgmt::V2018_02_01::Models::Certificate
+        AppServicePlan = Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlan
+        DomainOwnershipIdentifier = Azure::Web::Mgmt::V2018_02_01::Models::DomainOwnershipIdentifier
+        AnalysisDefinition = Azure::Web::Mgmt::V2018_02_01::Models::AnalysisDefinition
+        User = Azure::Web::Mgmt::V2018_02_01::Models::User
         CertificatePatchResource = Azure::Web::Mgmt::V2018_02_01::Models::CertificatePatchResource
         DetectorDefinition = Azure::Web::Mgmt::V2018_02_01::Models::DetectorDefinition
-        AnalysisDefinition = Azure::Web::Mgmt::V2018_02_01::Models::AnalysisDefinition
-        DetectorResponse = Azure::Web::Mgmt::V2018_02_01::Models::DetectorResponse
-        DiagnosticAnalysis = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticAnalysis
-        DiagnosticCategory = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticCategory
         DiagnosticDetectorResponse = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticDetectorResponse
+        DetectorResponse = Azure::Web::Mgmt::V2018_02_01::Models::DetectorResponse
+        LocalizableString = Azure::Web::Mgmt::V2018_02_01::Models::LocalizableString
+        DiagnosticCategory = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticCategory
+        GeoRegion = Azure::Web::Mgmt::V2018_02_01::Models::GeoRegion
         Recommendation = Azure::Web::Mgmt::V2018_02_01::Models::Recommendation
         RecommendationRule = Azure::Web::Mgmt::V2018_02_01::Models::RecommendationRule
-        BillingMeter = Azure::Web::Mgmt::V2018_02_01::Models::BillingMeter
-        GeoRegion = Azure::Web::Mgmt::V2018_02_01::Models::GeoRegion
+        DiagnosticAnalysis = Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticAnalysis
+        VnetValidationTestFailure = Azure::Web::Mgmt::V2018_02_01::Models::VnetValidationTestFailure
         PremierAddOnOffer = Azure::Web::Mgmt::V2018_02_01::Models::PremierAddOnOffer
         SourceControl = Azure::Web::Mgmt::V2018_02_01::Models::SourceControl
-        VnetParameters = Azure::Web::Mgmt::V2018_02_01::Models::VnetParameters
-        VnetValidationTestFailure = Azure::Web::Mgmt::V2018_02_01::Models::VnetValidationTestFailure
+        Certificate = Azure::Web::Mgmt::V2018_02_01::Models::Certificate
+        BillingMeter = Azure::Web::Mgmt::V2018_02_01::Models::BillingMeter
         VnetValidationFailureDetails = Azure::Web::Mgmt::V2018_02_01::Models::VnetValidationFailureDetails
         BackupItem = Azure::Web::Mgmt::V2018_02_01::Models::BackupItem
-        BackupRequest = Azure::Web::Mgmt::V2018_02_01::Models::BackupRequest
         ConnectionStringDictionary = Azure::Web::Mgmt::V2018_02_01::Models::ConnectionStringDictionary
-        ContinuousWebJob = Azure::Web::Mgmt::V2018_02_01::Models::ContinuousWebJob
+        VnetParameters = Azure::Web::Mgmt::V2018_02_01::Models::VnetParameters
         CustomHostnameAnalysisResult = Azure::Web::Mgmt::V2018_02_01::Models::CustomHostnameAnalysisResult
-        DeletedAppRestoreRequest = Azure::Web::Mgmt::V2018_02_01::Models::DeletedAppRestoreRequest
-        Deployment = Azure::Web::Mgmt::V2018_02_01::Models::Deployment
+        CertificateCollection = Azure::Web::Mgmt::V2018_02_01::Models::CertificateCollection
         FunctionEnvelope = Azure::Web::Mgmt::V2018_02_01::Models::FunctionEnvelope
         FunctionSecrets = Azure::Web::Mgmt::V2018_02_01::Models::FunctionSecrets
-        HostNameBinding = Azure::Web::Mgmt::V2018_02_01::Models::HostNameBinding
+        ContinuousWebJob = Azure::Web::Mgmt::V2018_02_01::Models::ContinuousWebJob
         MSDeploy = Azure::Web::Mgmt::V2018_02_01::Models::MSDeploy
-        MSDeployLog = Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLog
+        DeletedAppRestoreRequest = Azure::Web::Mgmt::V2018_02_01::Models::DeletedAppRestoreRequest
         MSDeployStatus = Azure::Web::Mgmt::V2018_02_01::Models::MSDeployStatus
         MigrateMySqlRequest = Azure::Web::Mgmt::V2018_02_01::Models::MigrateMySqlRequest
-        MigrateMySqlStatus = Azure::Web::Mgmt::V2018_02_01::Models::MigrateMySqlStatus
+        HostNameBinding = Azure::Web::Mgmt::V2018_02_01::Models::HostNameBinding
         RelayServiceConnectionEntity = Azure::Web::Mgmt::V2018_02_01::Models::RelayServiceConnectionEntity
-        NetworkFeatures = Azure::Web::Mgmt::V2018_02_01::Models::NetworkFeatures
+        MSDeployLog = Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLog
         PremierAddOn = Azure::Web::Mgmt::V2018_02_01::Models::PremierAddOn
         PremierAddOnPatchResource = Azure::Web::Mgmt::V2018_02_01::Models::PremierAddOnPatchResource
-        PrivateAccess = Azure::Web::Mgmt::V2018_02_01::Models::PrivateAccess
+        MigrateMySqlStatus = Azure::Web::Mgmt::V2018_02_01::Models::MigrateMySqlStatus
         ProcessThreadInfo = Azure::Web::Mgmt::V2018_02_01::Models::ProcessThreadInfo
-        ProcessModuleInfo = Azure::Web::Mgmt::V2018_02_01::Models::ProcessModuleInfo
+        NetworkFeatures = Azure::Web::Mgmt::V2018_02_01::Models::NetworkFeatures
         ProcessInfo = Azure::Web::Mgmt::V2018_02_01::Models::ProcessInfo
         PublicCertificate = Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificate
-        RestoreRequest = Azure::Web::Mgmt::V2018_02_01::Models::RestoreRequest
-        SiteAuthSettings = Azure::Web::Mgmt::V2018_02_01::Models::SiteAuthSettings
+        PrivateAccess = Azure::Web::Mgmt::V2018_02_01::Models::PrivateAccess
         SiteConfigResource = Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigResource
-        SiteConfigurationSnapshotInfo = Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigurationSnapshotInfo
+        MetricAvailability = Azure::Web::Mgmt::V2018_02_01::Models::MetricAvailability
         SiteExtensionInfo = Azure::Web::Mgmt::V2018_02_01::Models::SiteExtensionInfo
         SiteInstance = Azure::Web::Mgmt::V2018_02_01::Models::SiteInstance
-        SiteLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::SiteLogsConfig
+        SiteAuthSettings = Azure::Web::Mgmt::V2018_02_01::Models::SiteAuthSettings
         SitePatchResource = Azure::Web::Mgmt::V2018_02_01::Models::SitePatchResource
+        SiteConfigurationSnapshotInfo = Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigurationSnapshotInfo
+        ProcessModuleInfo = Azure::Web::Mgmt::V2018_02_01::Models::ProcessModuleInfo
+        SlotConfigNamesResource = Azure::Web::Mgmt::V2018_02_01::Models::SlotConfigNamesResource
+        SiteLogsConfig = Azure::Web::Mgmt::V2018_02_01::Models::SiteLogsConfig
+        SnapshotRestoreRequest = Azure::Web::Mgmt::V2018_02_01::Models::SnapshotRestoreRequest
         SitePhpErrorLogFlag = Azure::Web::Mgmt::V2018_02_01::Models::SitePhpErrorLogFlag
         SiteSourceControl = Azure::Web::Mgmt::V2018_02_01::Models::SiteSourceControl
-        SlotConfigNamesResource = Azure::Web::Mgmt::V2018_02_01::Models::SlotConfigNamesResource
+        StringDictionary = Azure::Web::Mgmt::V2018_02_01::Models::StringDictionary
         SlotDifference = Azure::Web::Mgmt::V2018_02_01::Models::SlotDifference
-        SnapshotRestoreRequest = Azure::Web::Mgmt::V2018_02_01::Models::SnapshotRestoreRequest
+        TriggeredJobRun = Azure::Web::Mgmt::V2018_02_01::Models::TriggeredJobRun
         StorageMigrationOptions = Azure::Web::Mgmt::V2018_02_01::Models::StorageMigrationOptions
         StorageMigrationResponse = Azure::Web::Mgmt::V2018_02_01::Models::StorageMigrationResponse
-        StringDictionary = Azure::Web::Mgmt::V2018_02_01::Models::StringDictionary
+        WebJob = Azure::Web::Mgmt::V2018_02_01::Models::WebJob
         SwiftVirtualNetwork = Azure::Web::Mgmt::V2018_02_01::Models::SwiftVirtualNetwork
-        TriggeredJobRun = Azure::Web::Mgmt::V2018_02_01::Models::TriggeredJobRun
+        AppServiceEnvironmentPatchResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentPatchResource
         TriggeredJobHistory = Azure::Web::Mgmt::V2018_02_01::Models::TriggeredJobHistory
         TriggeredWebJob = Azure::Web::Mgmt::V2018_02_01::Models::TriggeredWebJob
-        WebJob = Azure::Web::Mgmt::V2018_02_01::Models::WebJob
-        AppServiceEnvironmentResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentResource
-        AppServiceEnvironmentPatchResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentPatchResource
-        MetricDefinition = Azure::Web::Mgmt::V2018_02_01::Models::MetricDefinition
-        Usage = Azure::Web::Mgmt::V2018_02_01::Models::Usage
-        WorkerPoolResource = Azure::Web::Mgmt::V2018_02_01::Models::WorkerPoolResource
-        AppServicePlanPatchResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlanPatchResource
         HybridConnectionLimits = Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionLimits
-        KeyVaultSecretStatus = Azure::Web::Mgmt::V2018_02_01::Models::KeyVaultSecretStatus
+        HybridConnection = Azure::Web::Mgmt::V2018_02_01::Models::HybridConnection
         CertificateProductType = Azure::Web::Mgmt::V2018_02_01::Models::CertificateProductType
-        ProvisioningState = Azure::Web::Mgmt::V2018_02_01::Models::ProvisioningState
+        WorkerPoolResource = Azure::Web::Mgmt::V2018_02_01::Models::WorkerPoolResource
+        MetricDefinition = Azure::Web::Mgmt::V2018_02_01::Models::MetricDefinition
+        RouteType = Azure::Web::Mgmt::V2018_02_01::Models::RouteType
+        KeyVaultSecretStatus = Azure::Web::Mgmt::V2018_02_01::Models::KeyVaultSecretStatus
+        AppServiceEnvironmentResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentResource
         CertificateOrderStatus = Azure::Web::Mgmt::V2018_02_01::Models::CertificateOrderStatus
         CertificateOrderActionType = Azure::Web::Mgmt::V2018_02_01::Models::CertificateOrderActionType
-        RouteType = Azure::Web::Mgmt::V2018_02_01::Models::RouteType
+        AppServicePlanPatchResource = Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlanPatchResource
         ManagedServiceIdentityType = Azure::Web::Mgmt::V2018_02_01::Models::ManagedServiceIdentityType
         IpFilterTag = Azure::Web::Mgmt::V2018_02_01::Models::IpFilterTag
         AutoHealActionType = Azure::Web::Mgmt::V2018_02_01::Models::AutoHealActionType
-        ConnectionStringType = Azure::Web::Mgmt::V2018_02_01::Models::ConnectionStringType
+        Domain = Azure::Web::Mgmt::V2018_02_01::Models::Domain
         ScmType = Azure::Web::Mgmt::V2018_02_01::Models::ScmType
         ManagedPipelineMode = Azure::Web::Mgmt::V2018_02_01::Models::ManagedPipelineMode
         SiteLoadBalancing = Azure::Web::Mgmt::V2018_02_01::Models::SiteLoadBalancing
         SupportedTlsVersions = Azure::Web::Mgmt::V2018_02_01::Models::SupportedTlsVersions
         FtpsState = Azure::Web::Mgmt::V2018_02_01::Models::FtpsState
-        SslState = Azure::Web::Mgmt::V2018_02_01::Models::SslState
+        ConnectionStringType = Azure::Web::Mgmt::V2018_02_01::Models::ConnectionStringType
         HostType = Azure::Web::Mgmt::V2018_02_01::Models::HostType
         UsageState = Azure::Web::Mgmt::V2018_02_01::Models::UsageState
         SiteAvailabilityState = Azure::Web::Mgmt::V2018_02_01::Models::SiteAvailabilityState
         StatusOptions = Azure::Web::Mgmt::V2018_02_01::Models::StatusOptions
         DomainStatus = Azure::Web::Mgmt::V2018_02_01::Models::DomainStatus
-        AzureResourceType = Azure::Web::Mgmt::V2018_02_01::Models::AzureResourceType
+        SslState = Azure::Web::Mgmt::V2018_02_01::Models::SslState
         CustomHostNameDnsRecordType = Azure::Web::Mgmt::V2018_02_01::Models::CustomHostNameDnsRecordType
         HostNameType = Azure::Web::Mgmt::V2018_02_01::Models::HostNameType
         DnsType = Azure::Web::Mgmt::V2018_02_01::Models::DnsType
         DomainType = Azure::Web::Mgmt::V2018_02_01::Models::DomainType
         HostingEnvironmentStatus = Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentStatus
-        InternalLoadBalancingMode = Azure::Web::Mgmt::V2018_02_01::Models::InternalLoadBalancingMode
+        Usage = Azure::Web::Mgmt::V2018_02_01::Models::Usage
         ComputeModeOptions = Azure::Web::Mgmt::V2018_02_01::Models::ComputeModeOptions
         WorkerSizeOptions = Azure::Web::Mgmt::V2018_02_01::Models::WorkerSizeOptions
         AccessControlEntryAction = Azure::Web::Mgmt::V2018_02_01::Models::AccessControlEntryAction
-        OperationStatus = Azure::Web::Mgmt::V2018_02_01::Models::OperationStatus
-        IssueType = Azure::Web::Mgmt::V2018_02_01::Models::IssueType
-        SolutionType = Azure::Web::Mgmt::V2018_02_01::Models::SolutionType
+        Resource = Azure::Web::Mgmt::V2018_02_01::Models::Resource
         RenderingType = Azure::Web::Mgmt::V2018_02_01::Models::RenderingType
-        ResourceScopeType = Azure::Web::Mgmt::V2018_02_01::Models::ResourceScopeType
-        NotificationLevel = Azure::Web::Mgmt::V2018_02_01::Models::NotificationLevel
+        InternalLoadBalancingMode = Azure::Web::Mgmt::V2018_02_01::Models::InternalLoadBalancingMode
+        AzureResourceType = Azure::Web::Mgmt::V2018_02_01::Models::AzureResourceType
         Channels = Azure::Web::Mgmt::V2018_02_01::Models::Channels
         AppServicePlanRestrictions = Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlanRestrictions
-        InAvailabilityReasonType = Azure::Web::Mgmt::V2018_02_01::Models::InAvailabilityReasonType
+        ProvisioningState = Azure::Web::Mgmt::V2018_02_01::Models::ProvisioningState
         CheckNameResourceTypes = Azure::Web::Mgmt::V2018_02_01::Models::CheckNameResourceTypes
+        ResourceScopeType = Azure::Web::Mgmt::V2018_02_01::Models::ResourceScopeType
+        NotificationLevel = Azure::Web::Mgmt::V2018_02_01::Models::NotificationLevel
+        IssueType = Azure::Web::Mgmt::V2018_02_01::Models::IssueType
+        DatabaseType = Azure::Web::Mgmt::V2018_02_01::Models::DatabaseType
+        InAvailabilityReasonType = Azure::Web::Mgmt::V2018_02_01::Models::InAvailabilityReasonType
+        SolutionType = Azure::Web::Mgmt::V2018_02_01::Models::SolutionType
         ValidateResourceTypes = Azure::Web::Mgmt::V2018_02_01::Models::ValidateResourceTypes
         LogLevel = Azure::Web::Mgmt::V2018_02_01::Models::LogLevel
         BackupItemStatus = Azure::Web::Mgmt::V2018_02_01::Models::BackupItemStatus
-        DatabaseType = Azure::Web::Mgmt::V2018_02_01::Models::DatabaseType
+        MSDeployLogEntryType = Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLogEntryType
         FrequencyUnit = Azure::Web::Mgmt::V2018_02_01::Models::FrequencyUnit
-        ContinuousWebJobStatus = Azure::Web::Mgmt::V2018_02_01::Models::ContinuousWebJobStatus
-        WebJobType = Azure::Web::Mgmt::V2018_02_01::Models::WebJobType
+        ProxyOnlyResource = Azure::Web::Mgmt::V2018_02_01::Models::ProxyOnlyResource
+        OperationStatus = Azure::Web::Mgmt::V2018_02_01::Models::OperationStatus
         PublishingProfileFormat = Azure::Web::Mgmt::V2018_02_01::Models::PublishingProfileFormat
         DnsVerificationTestResult = Azure::Web::Mgmt::V2018_02_01::Models::DnsVerificationTestResult
-        MSDeployLogEntryType = Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLogEntryType
+        BuiltInAuthenticationProvider = Azure::Web::Mgmt::V2018_02_01::Models::BuiltInAuthenticationProvider
         MSDeployProvisioningState = Azure::Web::Mgmt::V2018_02_01::Models::MSDeployProvisioningState
         MySqlMigrationType = Azure::Web::Mgmt::V2018_02_01::Models::MySqlMigrationType
-        PublicCertificateLocation = Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificateLocation
-        BackupRestoreOperationType = Azure::Web::Mgmt::V2018_02_01::Models::BackupRestoreOperationType
+        ContinuousWebJobStatus = Azure::Web::Mgmt::V2018_02_01::Models::ContinuousWebJobStatus
+        WebJobType = Azure::Web::Mgmt::V2018_02_01::Models::WebJobType
         UnauthenticatedClientAction = Azure::Web::Mgmt::V2018_02_01::Models::UnauthenticatedClientAction
-        BuiltInAuthenticationProvider = Azure::Web::Mgmt::V2018_02_01::Models::BuiltInAuthenticationProvider
         CloneAbilityResult = Azure::Web::Mgmt::V2018_02_01::Models::CloneAbilityResult
         SiteExtensionType = Azure::Web::Mgmt::V2018_02_01::Models::SiteExtensionType
         TriggeredWebJobStatus = Azure::Web::Mgmt::V2018_02_01::Models::TriggeredWebJobStatus
+        PublicCertificateLocation = Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificateLocation
+        BackupRestoreOperationType = Azure::Web::Mgmt::V2018_02_01::Models::BackupRestoreOperationType
+        BackupRequest = Azure::Web::Mgmt::V2018_02_01::Models::BackupRequest
         SkuName = Azure::Web::Mgmt::V2018_02_01::Models::SkuName
+        RestoreRequest = Azure::Web::Mgmt::V2018_02_01::Models::RestoreRequest
+        ManagedServiceIdentity = Azure::Web::Mgmt::V2018_02_01::Models::ManagedServiceIdentity
+        Deployment = Azure::Web::Mgmt::V2018_02_01::Models::Deployment
+        Snapshot = Azure::Web::Mgmt::V2018_02_01::Models::Snapshot
+        Identifier = Azure::Web::Mgmt::V2018_02_01::Models::Identifier
       end
 
       class WebManagementClass
-        attr_reader :app_service_certificate_orders, :certificate_registration_provider, :domains, :top_level_domains, :domain_registration_provider, :certificates, :deleted_web_apps, :diagnostics, :provider, :recommendations, :web_apps, :app_service_environments, :app_service_plans, :configurable, :base_url, :options, :model_classes
+        attr_reader :diagnostics, :domains, :app_service_certificate_orders, :certificate_registration_provider, :top_level_domains, :domain_registration_provider, :deleted_web_apps, :certificates, :recommendations, :web_apps, :app_service_environments, :app_service_plans, :provider, :configurable, :base_url, :options, :model_classes
 
         def initialize(configurable, base_url=nil, options=nil)
           @configurable, @base_url, @options = configurable, base_url, options
@@ -364,19 +364,19 @@ module Azure::Profiles::Latest
             @client_0.subscription_id = configurable.subscription_id
           end
           add_telemetry(@client_0)
+          @diagnostics = @client_0.diagnostics
+          @domains = @client_0.domains
           @app_service_certificate_orders = @client_0.app_service_certificate_orders
           @certificate_registration_provider = @client_0.certificate_registration_provider
-          @domains = @client_0.domains
           @top_level_domains = @client_0.top_level_domains
           @domain_registration_provider = @client_0.domain_registration_provider
-          @certificates = @client_0.certificates
           @deleted_web_apps = @client_0.deleted_web_apps
-          @diagnostics = @client_0.diagnostics
-          @provider = @client_0.provider
+          @certificates = @client_0.certificates
           @recommendations = @client_0.recommendations
           @web_apps = @client_0.web_apps
           @app_service_environments = @client_0.app_service_environments
           @app_service_plans = @client_0.app_service_plans
+          @provider = @client_0.provider
 
           @model_classes = ModelClasses.new
         end
@@ -400,9 +400,6 @@ module Azure::Profiles::Latest
           end
           def app_service_certificate
             Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificate
-          end
-          def operation
-            Azure::Web::Mgmt::V2018_02_01::Models::Operation
           end
           def app_service_certificate_collection
             Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificateCollection
@@ -431,6 +428,9 @@ module Azure::Profiles::Latest
           def perf_mon_response
             Azure::Web::Mgmt::V2018_02_01::Models::PerfMonResponse
           end
+          def operation
+            Azure::Web::Mgmt::V2018_02_01::Models::Operation
+          end
           def stamp_capacity
             Azure::Web::Mgmt::V2018_02_01::Models::StampCapacity
           end
@@ -455,14 +455,8 @@ module Azure::Profiles::Latest
           def site_cloneability_criterion
             Azure::Web::Mgmt::V2018_02_01::Models::SiteCloneabilityCriterion
           end
-          def localizable_string
-            Azure::Web::Mgmt::V2018_02_01::Models::LocalizableString
-          end
           def site_cloneability
             Azure::Web::Mgmt::V2018_02_01::Models::SiteCloneability
-          end
-          def csm_usage_quota
-            Azure::Web::Mgmt::V2018_02_01::Models::CsmUsageQuota
           end
           def msdeploy_log_entry
             Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLogEntry
@@ -470,14 +464,11 @@ module Azure::Profiles::Latest
           def csm_usage_quota_collection
             Azure::Web::Mgmt::V2018_02_01::Models::CsmUsageQuotaCollection
           end
+          def csm_usage_quota
+            Azure::Web::Mgmt::V2018_02_01::Models::CsmUsageQuota
+          end
           def http_logs_config
             Azure::Web::Mgmt::V2018_02_01::Models::HttpLogsConfig
-          end
-          def deleted_site
-            Azure::Web::Mgmt::V2018_02_01::Models::DeletedSite
-          end
-          def managed_service_identity
-            Azure::Web::Mgmt::V2018_02_01::Models::ManagedServiceIdentity
           end
           def error_entity
             Azure::Web::Mgmt::V2018_02_01::Models::ErrorEntity
@@ -485,11 +476,11 @@ module Azure::Profiles::Latest
           def cloning_info
             Azure::Web::Mgmt::V2018_02_01::Models::CloningInfo
           end
+          def deleted_site
+            Azure::Web::Mgmt::V2018_02_01::Models::DeletedSite
+          end
           def identifier_collection
             Azure::Web::Mgmt::V2018_02_01::Models::IdentifierCollection
-          end
-          def ip_security_restriction
-            Azure::Web::Mgmt::V2018_02_01::Models::IpSecurityRestriction
           end
           def certificate_details
             Azure::Web::Mgmt::V2018_02_01::Models::CertificateDetails
@@ -497,11 +488,11 @@ module Azure::Profiles::Latest
           def cors_settings
             Azure::Web::Mgmt::V2018_02_01::Models::CorsSettings
           end
+          def ip_security_restriction
+            Azure::Web::Mgmt::V2018_02_01::Models::IpSecurityRestriction
+          end
           def snapshot_recovery_source
             Azure::Web::Mgmt::V2018_02_01::Models::SnapshotRecoverySource
-          end
-          def auto_heal_actions
-            Azure::Web::Mgmt::V2018_02_01::Models::AutoHealActions
           end
           def resource_metric_property
             Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricProperty
@@ -509,17 +500,20 @@ module Azure::Profiles::Latest
           def status_codes_based_trigger
             Azure::Web::Mgmt::V2018_02_01::Models::StatusCodesBasedTrigger
           end
+          def auto_heal_actions
+            Azure::Web::Mgmt::V2018_02_01::Models::AutoHealActions
+          end
           def resource_metric_value
             Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricValue
-          end
-          def auto_heal_triggers
-            Azure::Web::Mgmt::V2018_02_01::Models::AutoHealTriggers
           end
           def resource_metric
             Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetric
           end
           def site_limits
             Azure::Web::Mgmt::V2018_02_01::Models::SiteLimits
+          end
+          def auto_heal_triggers
+            Azure::Web::Mgmt::V2018_02_01::Models::AutoHealTriggers
           end
           def resource_metric_collection
             Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricCollection
@@ -566,9 +560,6 @@ module Azure::Profiles::Latest
           def triggered_job_history_collection
             Azure::Web::Mgmt::V2018_02_01::Models::TriggeredJobHistoryCollection
           end
-          def resource
-            Azure::Web::Mgmt::V2018_02_01::Models::Resource
-          end
           def diagnostic_metric_sample
             Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticMetricSample
           end
@@ -581,20 +572,8 @@ module Azure::Profiles::Latest
           def name_identifier
             Azure::Web::Mgmt::V2018_02_01::Models::NameIdentifier
           end
-          def data_source
-            Azure::Web::Mgmt::V2018_02_01::Models::DataSource
-          end
-          def metric_availability
-            Azure::Web::Mgmt::V2018_02_01::Models::MetricAvailability
-          end
           def response_meta_data
             Azure::Web::Mgmt::V2018_02_01::Models::ResponseMetaData
-          end
-          def metric_specification
-            Azure::Web::Mgmt::V2018_02_01::Models::MetricSpecification
-          end
-          def analysis_data
-            Azure::Web::Mgmt::V2018_02_01::Models::AnalysisData
           end
           def csm_operation_description_properties
             Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDescriptionProperties
@@ -602,11 +581,11 @@ module Azure::Profiles::Latest
           def triggered_web_job_collection
             Azure::Web::Mgmt::V2018_02_01::Models::TriggeredWebJobCollection
           end
-          def csm_operation_description
-            Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDescription
+          def analysis_data
+            Azure::Web::Mgmt::V2018_02_01::Models::AnalysisData
           end
-          def data_table_response_column
-            Azure::Web::Mgmt::V2018_02_01::Models::DataTableResponseColumn
+          def data_source
+            Azure::Web::Mgmt::V2018_02_01::Models::DataSource
           end
           def address
             Azure::Web::Mgmt::V2018_02_01::Models::Address
@@ -665,128 +644,140 @@ module Azure::Profiles::Latest
           def enabled_config
             Azure::Web::Mgmt::V2018_02_01::Models::EnabledConfig
           end
-          def diagnostic_category_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticCategoryCollection
+          def csm_operation_description
+            Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDescription
+          end
+          def data_table_response_column
+            Azure::Web::Mgmt::V2018_02_01::Models::DataTableResponseColumn
           end
           def app_service_certificate_order_collection
             Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificateOrderCollection
           end
-          def private_access_virtual_network
-            Azure::Web::Mgmt::V2018_02_01::Models::PrivateAccessVirtualNetwork
-          end
-          def web_app_instance_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::WebAppInstanceCollection
+          def metric_specification
+            Azure::Web::Mgmt::V2018_02_01::Models::MetricSpecification
           end
           def perf_mon_set
             Azure::Web::Mgmt::V2018_02_01::Models::PerfMonSet
           end
-          def process_module_info_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::ProcessModuleInfoCollection
+          def private_access_virtual_network
+            Azure::Web::Mgmt::V2018_02_01::Models::PrivateAccessVirtualNetwork
           end
-          def stack_minor_version
-            Azure::Web::Mgmt::V2018_02_01::Models::StackMinorVersion
+          def diagnostic_category_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticCategoryCollection
           end
           def resource_metric_availability
             Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricAvailability
           end
-          def stack_major_version
-            Azure::Web::Mgmt::V2018_02_01::Models::StackMajorVersion
+          def process_module_info_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::ProcessModuleInfoCollection
           end
-          def site_configuration_snapshot_info_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigurationSnapshotInfoCollection
+          def web_app_instance_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::WebAppInstanceCollection
           end
           def application_stack
             Azure::Web::Mgmt::V2018_02_01::Models::ApplicationStack
           end
-          def slot_swap_status
-            Azure::Web::Mgmt::V2018_02_01::Models::SlotSwapStatus
+          def stack_major_version
+            Azure::Web::Mgmt::V2018_02_01::Models::StackMajorVersion
           end
-          def application_stack_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::ApplicationStackCollection
+          def stack_minor_version
+            Azure::Web::Mgmt::V2018_02_01::Models::StackMinorVersion
           end
           def api_definition_info
             Azure::Web::Mgmt::V2018_02_01::Models::ApiDefinitionInfo
           end
-          def resource_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::ResourceCollection
+          def slot_swap_status
+            Azure::Web::Mgmt::V2018_02_01::Models::SlotSwapStatus
           end
-          def slow_requests_based_trigger
-            Azure::Web::Mgmt::V2018_02_01::Models::SlowRequestsBasedTrigger
+          def site_configuration_snapshot_info_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigurationSnapshotInfoCollection
           end
           def recommendation_collection
             Azure::Web::Mgmt::V2018_02_01::Models::RecommendationCollection
           end
-          def auto_heal_rules
-            Azure::Web::Mgmt::V2018_02_01::Models::AutoHealRules
+          def resource_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::ResourceCollection
           end
-          def hybrid_connection_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionCollection
+          def application_stack_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::ApplicationStackCollection
           end
           def virtual_directory
             Azure::Web::Mgmt::V2018_02_01::Models::VirtualDirectory
           end
-          def worker_pool_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::WorkerPoolCollection
+          def auto_heal_rules
+            Azure::Web::Mgmt::V2018_02_01::Models::AutoHealRules
           end
-          def conn_string_info
-            Azure::Web::Mgmt::V2018_02_01::Models::ConnStringInfo
+          def slow_requests_based_trigger
+            Azure::Web::Mgmt::V2018_02_01::Models::SlowRequestsBasedTrigger
           end
           def billing_meter_collection
             Azure::Web::Mgmt::V2018_02_01::Models::BillingMeterCollection
           end
-          def host_name_binding_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::HostNameBindingCollection
+          def worker_pool_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::WorkerPoolCollection
           end
-          def csm_move_resource_envelope
-            Azure::Web::Mgmt::V2018_02_01::Models::CsmMoveResourceEnvelope
+          def hybrid_connection_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionCollection
           end
           def site_extension_info_collection
             Azure::Web::Mgmt::V2018_02_01::Models::SiteExtensionInfoCollection
           end
-          def usage_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::UsageCollection
+          def host_name_binding_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::HostNameBindingCollection
           end
-          def default_error_response
-            Azure::Web::Mgmt::V2018_02_01::Models::DefaultErrorResponse
+          def conn_string_info
+            Azure::Web::Mgmt::V2018_02_01::Models::ConnStringInfo
           end
           def hosting_environment_deployment_info
             Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentDeploymentInfo
           end
-          def dimension
-            Azure::Web::Mgmt::V2018_02_01::Models::Dimension
+          def usage_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::UsageCollection
           end
-          def deployment_locations
-            Azure::Web::Mgmt::V2018_02_01::Models::DeploymentLocations
-          end
-          def csm_operation_display
-            Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDisplay
+          def csm_move_resource_envelope
+            Azure::Web::Mgmt::V2018_02_01::Models::CsmMoveResourceEnvelope
           end
           def geo_region_collection
             Azure::Web::Mgmt::V2018_02_01::Models::GeoRegionCollection
           end
-          def contact
-            Azure::Web::Mgmt::V2018_02_01::Models::Contact
+          def deployment_locations
+            Azure::Web::Mgmt::V2018_02_01::Models::DeploymentLocations
           end
-          def global_csm_sku_description
-            Azure::Web::Mgmt::V2018_02_01::Models::GlobalCsmSkuDescription
-          end
-          def domain_availablility_check_result
-            Azure::Web::Mgmt::V2018_02_01::Models::DomainAvailablilityCheckResult
+          def default_error_response
+            Azure::Web::Mgmt::V2018_02_01::Models::DefaultErrorResponse
           end
           def stamp_capacity_collection
             Azure::Web::Mgmt::V2018_02_01::Models::StampCapacityCollection
           end
-          def domain_ownership_identifier_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::DomainOwnershipIdentifierCollection
+          def global_csm_sku_description
+            Azure::Web::Mgmt::V2018_02_01::Models::GlobalCsmSkuDescription
+          end
+          def csm_operation_display
+            Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationDisplay
           end
           def premier_add_on_offer_collection
             Azure::Web::Mgmt::V2018_02_01::Models::PremierAddOnOfferCollection
           end
-          def tld_legal_agreement
-            Azure::Web::Mgmt::V2018_02_01::Models::TldLegalAgreement
+          def domain_ownership_identifier_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::DomainOwnershipIdentifierCollection
+          end
+          def domain_availablility_check_result
+            Azure::Web::Mgmt::V2018_02_01::Models::DomainAvailablilityCheckResult
+          end
+          def contact
+            Azure::Web::Mgmt::V2018_02_01::Models::Contact
           end
           def resource_name_availability
             Azure::Web::Mgmt::V2018_02_01::Models::ResourceNameAvailability
+          end
+          def perf_mon_counter_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::PerfMonCounterCollection
+          end
+          def dimension
+            Azure::Web::Mgmt::V2018_02_01::Models::Dimension
+          end
+          def public_certificate_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificateCollection
           end
           def top_level_domain_collection
             Azure::Web::Mgmt::V2018_02_01::Models::TopLevelDomainCollection
@@ -794,23 +785,11 @@ module Azure::Profiles::Latest
           def resource_name_availability_request
             Azure::Web::Mgmt::V2018_02_01::Models::ResourceNameAvailabilityRequest
           end
-          def perf_mon_counter_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::PerfMonCounterCollection
+          def tld_legal_agreement
+            Azure::Web::Mgmt::V2018_02_01::Models::TldLegalAgreement
           end
           def sku_infos
             Azure::Web::Mgmt::V2018_02_01::Models::SkuInfos
-          end
-          def public_certificate_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificateCollection
-          end
-          def sku_info_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::SkuInfoCollection
-          end
-          def proxy_only_resource
-            Azure::Web::Mgmt::V2018_02_01::Models::ProxyOnlyResource
-          end
-          def source_control_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::SourceControlCollection
           end
           def auto_heal_custom_action
             Azure::Web::Mgmt::V2018_02_01::Models::AutoHealCustomAction
@@ -818,8 +797,8 @@ module Azure::Profiles::Latest
           def validate_request
             Azure::Web::Mgmt::V2018_02_01::Models::ValidateRequest
           end
-          def ramp_up_rule
-            Azure::Web::Mgmt::V2018_02_01::Models::RampUpRule
+          def source_control_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::SourceControlCollection
           end
           def validate_response_error
             Azure::Web::Mgmt::V2018_02_01::Models::ValidateResponseError
@@ -827,17 +806,8 @@ module Azure::Profiles::Latest
           def site_config
             Azure::Web::Mgmt::V2018_02_01::Models::SiteConfig
           end
-          def validate_response
-            Azure::Web::Mgmt::V2018_02_01::Models::ValidateResponse
-          end
-          def default_error_response_error_details_item
-            Azure::Web::Mgmt::V2018_02_01::Models::DefaultErrorResponseErrorDetailsItem
-          end
-          def sku_info
-            Azure::Web::Mgmt::V2018_02_01::Models::SkuInfo
-          end
-          def service_specification
-            Azure::Web::Mgmt::V2018_02_01::Models::ServiceSpecification
+          def sku_info_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::SkuInfoCollection
           end
           def metric_availabilily
             Azure::Web::Mgmt::V2018_02_01::Models::MetricAvailabilily
@@ -845,38 +815,35 @@ module Azure::Profiles::Latest
           def domain_purchase_consent
             Azure::Web::Mgmt::V2018_02_01::Models::DomainPurchaseConsent
           end
-          def hosting_environment_diagnostics
-            Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentDiagnostics
+          def validate_response
+            Azure::Web::Mgmt::V2018_02_01::Models::ValidateResponse
           end
-          def domain_recommendation_search_parameters
-            Azure::Web::Mgmt::V2018_02_01::Models::DomainRecommendationSearchParameters
+          def ramp_up_rule
+            Azure::Web::Mgmt::V2018_02_01::Models::RampUpRule
           end
-          def file_system_application_logs_config
-            Azure::Web::Mgmt::V2018_02_01::Models::FileSystemApplicationLogsConfig
-          end
-          def certificate_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::CertificateCollection
+          def sku_info
+            Azure::Web::Mgmt::V2018_02_01::Models::SkuInfo
           end
           def azure_table_storage_application_logs_config
             Azure::Web::Mgmt::V2018_02_01::Models::AzureTableStorageApplicationLogsConfig
           end
-          def site_config_resource_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigResourceCollection
+          def file_system_application_logs_config
+            Azure::Web::Mgmt::V2018_02_01::Models::FileSystemApplicationLogsConfig
           end
-          def azure_blob_storage_application_logs_config
-            Azure::Web::Mgmt::V2018_02_01::Models::AzureBlobStorageApplicationLogsConfig
+          def default_error_response_error_details_item
+            Azure::Web::Mgmt::V2018_02_01::Models::DefaultErrorResponseErrorDetailsItem
           end
-          def requests_based_trigger
-            Azure::Web::Mgmt::V2018_02_01::Models::RequestsBasedTrigger
+          def domain_recommendation_search_parameters
+            Azure::Web::Mgmt::V2018_02_01::Models::DomainRecommendationSearchParameters
           end
           def application_logs_config
             Azure::Web::Mgmt::V2018_02_01::Models::ApplicationLogsConfig
           end
-          def sku_capacity
-            Azure::Web::Mgmt::V2018_02_01::Models::SkuCapacity
+          def requests_based_trigger
+            Azure::Web::Mgmt::V2018_02_01::Models::RequestsBasedTrigger
           end
-          def azure_blob_storage_http_logs_config
-            Azure::Web::Mgmt::V2018_02_01::Models::AzureBlobStorageHttpLogsConfig
+          def service_specification
+            Azure::Web::Mgmt::V2018_02_01::Models::ServiceSpecification
           end
           def csm_operation_collection
             Azure::Web::Mgmt::V2018_02_01::Models::CsmOperationCollection
@@ -887,29 +854,38 @@ module Azure::Profiles::Latest
           def file_system_http_logs_config
             Azure::Web::Mgmt::V2018_02_01::Models::FileSystemHttpLogsConfig
           end
-          def app_service_environment_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentCollection
+          def site_config_resource_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigResourceCollection
           end
-          def hosting_environment_profile
-            Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentProfile
+          def hosting_environment_diagnostics
+            Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentDiagnostics
           end
           def backup_item_collection
             Azure::Web::Mgmt::V2018_02_01::Models::BackupItemCollection
           end
-          def log_specification
-            Azure::Web::Mgmt::V2018_02_01::Models::LogSpecification
+          def hosting_environment_profile
+            Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentProfile
           end
-          def backup_schedule
-            Azure::Web::Mgmt::V2018_02_01::Models::BackupSchedule
+          def sku_capacity
+            Azure::Web::Mgmt::V2018_02_01::Models::SkuCapacity
+          end
+          def azure_blob_storage_http_logs_config
+            Azure::Web::Mgmt::V2018_02_01::Models::AzureBlobStorageHttpLogsConfig
+          end
+          def azure_blob_storage_application_logs_config
+            Azure::Web::Mgmt::V2018_02_01::Models::AzureBlobStorageApplicationLogsConfig
+          end
+          def domain_control_center_sso_request
+            Azure::Web::Mgmt::V2018_02_01::Models::DomainControlCenterSsoRequest
           end
           def site_seal_request
             Azure::Web::Mgmt::V2018_02_01::Models::SiteSealRequest
           end
-          def address_response
-            Azure::Web::Mgmt::V2018_02_01::Models::AddressResponse
+          def app_service_environment_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentCollection
           end
-          def domain_control_center_sso_request
-            Azure::Web::Mgmt::V2018_02_01::Models::DomainControlCenterSsoRequest
+          def log_specification
+            Azure::Web::Mgmt::V2018_02_01::Models::LogSpecification
           end
           def conn_string_value_type_pair
             Azure::Web::Mgmt::V2018_02_01::Models::ConnStringValueTypePair
@@ -917,8 +893,8 @@ module Azure::Profiles::Latest
           def handler_mapping
             Azure::Web::Mgmt::V2018_02_01::Models::HandlerMapping
           end
-          def web_job_collection
-            Azure::Web::Mgmt::V2018_02_01::Models::WebJobCollection
+          def address_response
+            Azure::Web::Mgmt::V2018_02_01::Models::AddressResponse
           end
           def app_service_certificate_resource
             Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificateResource
@@ -929,8 +905,8 @@ module Azure::Profiles::Latest
           def app_service_certificate_order_patch_resource
             Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificateOrderPatchResource
           end
-          def app_service_certificate_patch_resource
-            Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificatePatchResource
+          def web_job_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::WebJobCollection
           end
           def certificate_email
             Azure::Web::Mgmt::V2018_02_01::Models::CertificateEmail
@@ -941,8 +917,8 @@ module Azure::Profiles::Latest
           def reissue_certificate_order_request
             Azure::Web::Mgmt::V2018_02_01::Models::ReissueCertificateOrderRequest
           end
-          def renew_certificate_order_request
-            Azure::Web::Mgmt::V2018_02_01::Models::RenewCertificateOrderRequest
+          def backup_schedule
+            Azure::Web::Mgmt::V2018_02_01::Models::BackupSchedule
           end
           def vnet_route
             Azure::Web::Mgmt::V2018_02_01::Models::VnetRoute
@@ -953,11 +929,17 @@ module Azure::Profiles::Latest
           def vnet_gateway
             Azure::Web::Mgmt::V2018_02_01::Models::VnetGateway
           end
-          def user
-            Azure::Web::Mgmt::V2018_02_01::Models::User
+          def renew_certificate_order_request
+            Azure::Web::Mgmt::V2018_02_01::Models::RenewCertificateOrderRequest
           end
-          def snapshot
-            Azure::Web::Mgmt::V2018_02_01::Models::Snapshot
+          def app_service_certificate_patch_resource
+            Azure::Web::Mgmt::V2018_02_01::Models::AppServiceCertificatePatchResource
+          end
+          def hybrid_connection_key
+            Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionKey
+          end
+          def site
+            Azure::Web::Mgmt::V2018_02_01::Models::Site
           end
           def resource_metric_definition
             Azure::Web::Mgmt::V2018_02_01::Models::ResourceMetricDefinition
@@ -965,35 +947,23 @@ module Azure::Profiles::Latest
           def push_settings
             Azure::Web::Mgmt::V2018_02_01::Models::PushSettings
           end
-          def identifier
-            Azure::Web::Mgmt::V2018_02_01::Models::Identifier
-          end
-          def hybrid_connection_key
-            Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionKey
-          end
-          def hybrid_connection
-            Azure::Web::Mgmt::V2018_02_01::Models::HybridConnection
-          end
-          def site
-            Azure::Web::Mgmt::V2018_02_01::Models::Site
-          end
-          def app_service_plan
-            Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlan
-          end
-          def domain
-            Azure::Web::Mgmt::V2018_02_01::Models::Domain
-          end
-          def domain_ownership_identifier
-            Azure::Web::Mgmt::V2018_02_01::Models::DomainOwnershipIdentifier
-          end
           def domain_patch_resource
             Azure::Web::Mgmt::V2018_02_01::Models::DomainPatchResource
           end
           def top_level_domain
             Azure::Web::Mgmt::V2018_02_01::Models::TopLevelDomain
           end
-          def certificate
-            Azure::Web::Mgmt::V2018_02_01::Models::Certificate
+          def app_service_plan
+            Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlan
+          end
+          def domain_ownership_identifier
+            Azure::Web::Mgmt::V2018_02_01::Models::DomainOwnershipIdentifier
+          end
+          def analysis_definition
+            Azure::Web::Mgmt::V2018_02_01::Models::AnalysisDefinition
+          end
+          def user
+            Azure::Web::Mgmt::V2018_02_01::Models::User
           end
           def certificate_patch_resource
             Azure::Web::Mgmt::V2018_02_01::Models::CertificatePatchResource
@@ -1001,20 +971,20 @@ module Azure::Profiles::Latest
           def detector_definition
             Azure::Web::Mgmt::V2018_02_01::Models::DetectorDefinition
           end
-          def analysis_definition
-            Azure::Web::Mgmt::V2018_02_01::Models::AnalysisDefinition
+          def diagnostic_detector_response
+            Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticDetectorResponse
           end
           def detector_response
             Azure::Web::Mgmt::V2018_02_01::Models::DetectorResponse
           end
-          def diagnostic_analysis
-            Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticAnalysis
+          def localizable_string
+            Azure::Web::Mgmt::V2018_02_01::Models::LocalizableString
           end
           def diagnostic_category
             Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticCategory
           end
-          def diagnostic_detector_response
-            Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticDetectorResponse
+          def geo_region
+            Azure::Web::Mgmt::V2018_02_01::Models::GeoRegion
           end
           def recommendation
             Azure::Web::Mgmt::V2018_02_01::Models::Recommendation
@@ -1022,11 +992,11 @@ module Azure::Profiles::Latest
           def recommendation_rule
             Azure::Web::Mgmt::V2018_02_01::Models::RecommendationRule
           end
-          def billing_meter
-            Azure::Web::Mgmt::V2018_02_01::Models::BillingMeter
+          def diagnostic_analysis
+            Azure::Web::Mgmt::V2018_02_01::Models::DiagnosticAnalysis
           end
-          def geo_region
-            Azure::Web::Mgmt::V2018_02_01::Models::GeoRegion
+          def vnet_validation_test_failure
+            Azure::Web::Mgmt::V2018_02_01::Models::VnetValidationTestFailure
           end
           def premier_add_on_offer
             Azure::Web::Mgmt::V2018_02_01::Models::PremierAddOnOffer
@@ -1034,11 +1004,11 @@ module Azure::Profiles::Latest
           def source_control
             Azure::Web::Mgmt::V2018_02_01::Models::SourceControl
           end
-          def vnet_parameters
-            Azure::Web::Mgmt::V2018_02_01::Models::VnetParameters
+          def certificate
+            Azure::Web::Mgmt::V2018_02_01::Models::Certificate
           end
-          def vnet_validation_test_failure
-            Azure::Web::Mgmt::V2018_02_01::Models::VnetValidationTestFailure
+          def billing_meter
+            Azure::Web::Mgmt::V2018_02_01::Models::BillingMeter
           end
           def vnet_validation_failure_details
             Azure::Web::Mgmt::V2018_02_01::Models::VnetValidationFailureDetails
@@ -1046,23 +1016,17 @@ module Azure::Profiles::Latest
           def backup_item
             Azure::Web::Mgmt::V2018_02_01::Models::BackupItem
           end
-          def backup_request
-            Azure::Web::Mgmt::V2018_02_01::Models::BackupRequest
-          end
           def connection_string_dictionary
             Azure::Web::Mgmt::V2018_02_01::Models::ConnectionStringDictionary
           end
-          def continuous_web_job
-            Azure::Web::Mgmt::V2018_02_01::Models::ContinuousWebJob
+          def vnet_parameters
+            Azure::Web::Mgmt::V2018_02_01::Models::VnetParameters
           end
           def custom_hostname_analysis_result
             Azure::Web::Mgmt::V2018_02_01::Models::CustomHostnameAnalysisResult
           end
-          def deleted_app_restore_request
-            Azure::Web::Mgmt::V2018_02_01::Models::DeletedAppRestoreRequest
-          end
-          def deployment
-            Azure::Web::Mgmt::V2018_02_01::Models::Deployment
+          def certificate_collection
+            Azure::Web::Mgmt::V2018_02_01::Models::CertificateCollection
           end
           def function_envelope
             Azure::Web::Mgmt::V2018_02_01::Models::FunctionEnvelope
@@ -1070,14 +1034,14 @@ module Azure::Profiles::Latest
           def function_secrets
             Azure::Web::Mgmt::V2018_02_01::Models::FunctionSecrets
           end
-          def host_name_binding
-            Azure::Web::Mgmt::V2018_02_01::Models::HostNameBinding
+          def continuous_web_job
+            Azure::Web::Mgmt::V2018_02_01::Models::ContinuousWebJob
           end
           def msdeploy
             Azure::Web::Mgmt::V2018_02_01::Models::MSDeploy
           end
-          def msdeploy_log
-            Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLog
+          def deleted_app_restore_request
+            Azure::Web::Mgmt::V2018_02_01::Models::DeletedAppRestoreRequest
           end
           def msdeploy_status
             Azure::Web::Mgmt::V2018_02_01::Models::MSDeployStatus
@@ -1085,14 +1049,14 @@ module Azure::Profiles::Latest
           def migrate_my_sql_request
             Azure::Web::Mgmt::V2018_02_01::Models::MigrateMySqlRequest
           end
-          def migrate_my_sql_status
-            Azure::Web::Mgmt::V2018_02_01::Models::MigrateMySqlStatus
+          def host_name_binding
+            Azure::Web::Mgmt::V2018_02_01::Models::HostNameBinding
           end
           def relay_service_connection_entity
             Azure::Web::Mgmt::V2018_02_01::Models::RelayServiceConnectionEntity
           end
-          def network_features
-            Azure::Web::Mgmt::V2018_02_01::Models::NetworkFeatures
+          def msdeploy_log
+            Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLog
           end
           def premier_add_on
             Azure::Web::Mgmt::V2018_02_01::Models::PremierAddOn
@@ -1100,14 +1064,14 @@ module Azure::Profiles::Latest
           def premier_add_on_patch_resource
             Azure::Web::Mgmt::V2018_02_01::Models::PremierAddOnPatchResource
           end
-          def private_access
-            Azure::Web::Mgmt::V2018_02_01::Models::PrivateAccess
+          def migrate_my_sql_status
+            Azure::Web::Mgmt::V2018_02_01::Models::MigrateMySqlStatus
           end
           def process_thread_info
             Azure::Web::Mgmt::V2018_02_01::Models::ProcessThreadInfo
           end
-          def process_module_info
-            Azure::Web::Mgmt::V2018_02_01::Models::ProcessModuleInfo
+          def network_features
+            Azure::Web::Mgmt::V2018_02_01::Models::NetworkFeatures
           end
           def process_info
             Azure::Web::Mgmt::V2018_02_01::Models::ProcessInfo
@@ -1115,17 +1079,14 @@ module Azure::Profiles::Latest
           def public_certificate
             Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificate
           end
-          def restore_request
-            Azure::Web::Mgmt::V2018_02_01::Models::RestoreRequest
-          end
-          def site_auth_settings
-            Azure::Web::Mgmt::V2018_02_01::Models::SiteAuthSettings
+          def private_access
+            Azure::Web::Mgmt::V2018_02_01::Models::PrivateAccess
           end
           def site_config_resource
             Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigResource
           end
-          def site_configuration_snapshot_info
-            Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigurationSnapshotInfo
+          def metric_availability
+            Azure::Web::Mgmt::V2018_02_01::Models::MetricAvailability
           end
           def site_extension_info
             Azure::Web::Mgmt::V2018_02_01::Models::SiteExtensionInfo
@@ -1133,11 +1094,26 @@ module Azure::Profiles::Latest
           def site_instance
             Azure::Web::Mgmt::V2018_02_01::Models::SiteInstance
           end
-          def site_logs_config
-            Azure::Web::Mgmt::V2018_02_01::Models::SiteLogsConfig
+          def site_auth_settings
+            Azure::Web::Mgmt::V2018_02_01::Models::SiteAuthSettings
           end
           def site_patch_resource
             Azure::Web::Mgmt::V2018_02_01::Models::SitePatchResource
+          end
+          def site_configuration_snapshot_info
+            Azure::Web::Mgmt::V2018_02_01::Models::SiteConfigurationSnapshotInfo
+          end
+          def process_module_info
+            Azure::Web::Mgmt::V2018_02_01::Models::ProcessModuleInfo
+          end
+          def slot_config_names_resource
+            Azure::Web::Mgmt::V2018_02_01::Models::SlotConfigNamesResource
+          end
+          def site_logs_config
+            Azure::Web::Mgmt::V2018_02_01::Models::SiteLogsConfig
+          end
+          def snapshot_restore_request
+            Azure::Web::Mgmt::V2018_02_01::Models::SnapshotRestoreRequest
           end
           def site_php_error_log_flag
             Azure::Web::Mgmt::V2018_02_01::Models::SitePhpErrorLogFlag
@@ -1145,14 +1121,14 @@ module Azure::Profiles::Latest
           def site_source_control
             Azure::Web::Mgmt::V2018_02_01::Models::SiteSourceControl
           end
-          def slot_config_names_resource
-            Azure::Web::Mgmt::V2018_02_01::Models::SlotConfigNamesResource
+          def string_dictionary
+            Azure::Web::Mgmt::V2018_02_01::Models::StringDictionary
           end
           def slot_difference
             Azure::Web::Mgmt::V2018_02_01::Models::SlotDifference
           end
-          def snapshot_restore_request
-            Azure::Web::Mgmt::V2018_02_01::Models::SnapshotRestoreRequest
+          def triggered_job_run
+            Azure::Web::Mgmt::V2018_02_01::Models::TriggeredJobRun
           end
           def storage_migration_options
             Azure::Web::Mgmt::V2018_02_01::Models::StorageMigrationOptions
@@ -1160,14 +1136,14 @@ module Azure::Profiles::Latest
           def storage_migration_response
             Azure::Web::Mgmt::V2018_02_01::Models::StorageMigrationResponse
           end
-          def string_dictionary
-            Azure::Web::Mgmt::V2018_02_01::Models::StringDictionary
+          def web_job
+            Azure::Web::Mgmt::V2018_02_01::Models::WebJob
           end
           def swift_virtual_network
             Azure::Web::Mgmt::V2018_02_01::Models::SwiftVirtualNetwork
           end
-          def triggered_job_run
-            Azure::Web::Mgmt::V2018_02_01::Models::TriggeredJobRun
+          def app_service_environment_patch_resource
+            Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentPatchResource
           end
           def triggered_job_history
             Azure::Web::Mgmt::V2018_02_01::Models::TriggeredJobHistory
@@ -1175,38 +1151,29 @@ module Azure::Profiles::Latest
           def triggered_web_job
             Azure::Web::Mgmt::V2018_02_01::Models::TriggeredWebJob
           end
-          def web_job
-            Azure::Web::Mgmt::V2018_02_01::Models::WebJob
-          end
-          def app_service_environment_resource
-            Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentResource
-          end
-          def app_service_environment_patch_resource
-            Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentPatchResource
-          end
-          def metric_definition
-            Azure::Web::Mgmt::V2018_02_01::Models::MetricDefinition
-          end
-          def usage
-            Azure::Web::Mgmt::V2018_02_01::Models::Usage
-          end
-          def worker_pool_resource
-            Azure::Web::Mgmt::V2018_02_01::Models::WorkerPoolResource
-          end
-          def app_service_plan_patch_resource
-            Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlanPatchResource
-          end
           def hybrid_connection_limits
             Azure::Web::Mgmt::V2018_02_01::Models::HybridConnectionLimits
           end
-          def key_vault_secret_status
-            Azure::Web::Mgmt::V2018_02_01::Models::KeyVaultSecretStatus
+          def hybrid_connection
+            Azure::Web::Mgmt::V2018_02_01::Models::HybridConnection
           end
           def certificate_product_type
             Azure::Web::Mgmt::V2018_02_01::Models::CertificateProductType
           end
-          def provisioning_state
-            Azure::Web::Mgmt::V2018_02_01::Models::ProvisioningState
+          def worker_pool_resource
+            Azure::Web::Mgmt::V2018_02_01::Models::WorkerPoolResource
+          end
+          def metric_definition
+            Azure::Web::Mgmt::V2018_02_01::Models::MetricDefinition
+          end
+          def route_type
+            Azure::Web::Mgmt::V2018_02_01::Models::RouteType
+          end
+          def key_vault_secret_status
+            Azure::Web::Mgmt::V2018_02_01::Models::KeyVaultSecretStatus
+          end
+          def app_service_environment_resource
+            Azure::Web::Mgmt::V2018_02_01::Models::AppServiceEnvironmentResource
           end
           def certificate_order_status
             Azure::Web::Mgmt::V2018_02_01::Models::CertificateOrderStatus
@@ -1214,8 +1181,8 @@ module Azure::Profiles::Latest
           def certificate_order_action_type
             Azure::Web::Mgmt::V2018_02_01::Models::CertificateOrderActionType
           end
-          def route_type
-            Azure::Web::Mgmt::V2018_02_01::Models::RouteType
+          def app_service_plan_patch_resource
+            Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlanPatchResource
           end
           def managed_service_identity_type
             Azure::Web::Mgmt::V2018_02_01::Models::ManagedServiceIdentityType
@@ -1226,8 +1193,8 @@ module Azure::Profiles::Latest
           def auto_heal_action_type
             Azure::Web::Mgmt::V2018_02_01::Models::AutoHealActionType
           end
-          def connection_string_type
-            Azure::Web::Mgmt::V2018_02_01::Models::ConnectionStringType
+          def domain
+            Azure::Web::Mgmt::V2018_02_01::Models::Domain
           end
           def scm_type
             Azure::Web::Mgmt::V2018_02_01::Models::ScmType
@@ -1244,8 +1211,8 @@ module Azure::Profiles::Latest
           def ftps_state
             Azure::Web::Mgmt::V2018_02_01::Models::FtpsState
           end
-          def ssl_state
-            Azure::Web::Mgmt::V2018_02_01::Models::SslState
+          def connection_string_type
+            Azure::Web::Mgmt::V2018_02_01::Models::ConnectionStringType
           end
           def host_type
             Azure::Web::Mgmt::V2018_02_01::Models::HostType
@@ -1262,8 +1229,8 @@ module Azure::Profiles::Latest
           def domain_status
             Azure::Web::Mgmt::V2018_02_01::Models::DomainStatus
           end
-          def azure_resource_type
-            Azure::Web::Mgmt::V2018_02_01::Models::AzureResourceType
+          def ssl_state
+            Azure::Web::Mgmt::V2018_02_01::Models::SslState
           end
           def custom_host_name_dns_record_type
             Azure::Web::Mgmt::V2018_02_01::Models::CustomHostNameDnsRecordType
@@ -1280,8 +1247,8 @@ module Azure::Profiles::Latest
           def hosting_environment_status
             Azure::Web::Mgmt::V2018_02_01::Models::HostingEnvironmentStatus
           end
-          def internal_load_balancing_mode
-            Azure::Web::Mgmt::V2018_02_01::Models::InternalLoadBalancingMode
+          def usage
+            Azure::Web::Mgmt::V2018_02_01::Models::Usage
           end
           def compute_mode_options
             Azure::Web::Mgmt::V2018_02_01::Models::ComputeModeOptions
@@ -1292,23 +1259,17 @@ module Azure::Profiles::Latest
           def access_control_entry_action
             Azure::Web::Mgmt::V2018_02_01::Models::AccessControlEntryAction
           end
-          def operation_status
-            Azure::Web::Mgmt::V2018_02_01::Models::OperationStatus
-          end
-          def issue_type
-            Azure::Web::Mgmt::V2018_02_01::Models::IssueType
-          end
-          def solution_type
-            Azure::Web::Mgmt::V2018_02_01::Models::SolutionType
+          def resource
+            Azure::Web::Mgmt::V2018_02_01::Models::Resource
           end
           def rendering_type
             Azure::Web::Mgmt::V2018_02_01::Models::RenderingType
           end
-          def resource_scope_type
-            Azure::Web::Mgmt::V2018_02_01::Models::ResourceScopeType
+          def internal_load_balancing_mode
+            Azure::Web::Mgmt::V2018_02_01::Models::InternalLoadBalancingMode
           end
-          def notification_level
-            Azure::Web::Mgmt::V2018_02_01::Models::NotificationLevel
+          def azure_resource_type
+            Azure::Web::Mgmt::V2018_02_01::Models::AzureResourceType
           end
           def channels
             Azure::Web::Mgmt::V2018_02_01::Models::Channels
@@ -1316,11 +1277,29 @@ module Azure::Profiles::Latest
           def app_service_plan_restrictions
             Azure::Web::Mgmt::V2018_02_01::Models::AppServicePlanRestrictions
           end
-          def in_availability_reason_type
-            Azure::Web::Mgmt::V2018_02_01::Models::InAvailabilityReasonType
+          def provisioning_state
+            Azure::Web::Mgmt::V2018_02_01::Models::ProvisioningState
           end
           def check_name_resource_types
             Azure::Web::Mgmt::V2018_02_01::Models::CheckNameResourceTypes
+          end
+          def resource_scope_type
+            Azure::Web::Mgmt::V2018_02_01::Models::ResourceScopeType
+          end
+          def notification_level
+            Azure::Web::Mgmt::V2018_02_01::Models::NotificationLevel
+          end
+          def issue_type
+            Azure::Web::Mgmt::V2018_02_01::Models::IssueType
+          end
+          def database_type
+            Azure::Web::Mgmt::V2018_02_01::Models::DatabaseType
+          end
+          def in_availability_reason_type
+            Azure::Web::Mgmt::V2018_02_01::Models::InAvailabilityReasonType
+          end
+          def solution_type
+            Azure::Web::Mgmt::V2018_02_01::Models::SolutionType
           end
           def validate_resource_types
             Azure::Web::Mgmt::V2018_02_01::Models::ValidateResourceTypes
@@ -1331,17 +1310,17 @@ module Azure::Profiles::Latest
           def backup_item_status
             Azure::Web::Mgmt::V2018_02_01::Models::BackupItemStatus
           end
-          def database_type
-            Azure::Web::Mgmt::V2018_02_01::Models::DatabaseType
+          def msdeploy_log_entry_type
+            Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLogEntryType
           end
           def frequency_unit
             Azure::Web::Mgmt::V2018_02_01::Models::FrequencyUnit
           end
-          def continuous_web_job_status
-            Azure::Web::Mgmt::V2018_02_01::Models::ContinuousWebJobStatus
+          def proxy_only_resource
+            Azure::Web::Mgmt::V2018_02_01::Models::ProxyOnlyResource
           end
-          def web_job_type
-            Azure::Web::Mgmt::V2018_02_01::Models::WebJobType
+          def operation_status
+            Azure::Web::Mgmt::V2018_02_01::Models::OperationStatus
           end
           def publishing_profile_format
             Azure::Web::Mgmt::V2018_02_01::Models::PublishingProfileFormat
@@ -1349,8 +1328,8 @@ module Azure::Profiles::Latest
           def dns_verification_test_result
             Azure::Web::Mgmt::V2018_02_01::Models::DnsVerificationTestResult
           end
-          def msdeploy_log_entry_type
-            Azure::Web::Mgmt::V2018_02_01::Models::MSDeployLogEntryType
+          def built_in_authentication_provider
+            Azure::Web::Mgmt::V2018_02_01::Models::BuiltInAuthenticationProvider
           end
           def msdeploy_provisioning_state
             Azure::Web::Mgmt::V2018_02_01::Models::MSDeployProvisioningState
@@ -1358,17 +1337,14 @@ module Azure::Profiles::Latest
           def my_sql_migration_type
             Azure::Web::Mgmt::V2018_02_01::Models::MySqlMigrationType
           end
-          def public_certificate_location
-            Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificateLocation
+          def continuous_web_job_status
+            Azure::Web::Mgmt::V2018_02_01::Models::ContinuousWebJobStatus
           end
-          def backup_restore_operation_type
-            Azure::Web::Mgmt::V2018_02_01::Models::BackupRestoreOperationType
+          def web_job_type
+            Azure::Web::Mgmt::V2018_02_01::Models::WebJobType
           end
           def unauthenticated_client_action
             Azure::Web::Mgmt::V2018_02_01::Models::UnauthenticatedClientAction
-          end
-          def built_in_authentication_provider
-            Azure::Web::Mgmt::V2018_02_01::Models::BuiltInAuthenticationProvider
           end
           def clone_ability_result
             Azure::Web::Mgmt::V2018_02_01::Models::CloneAbilityResult
@@ -1379,8 +1355,32 @@ module Azure::Profiles::Latest
           def triggered_web_job_status
             Azure::Web::Mgmt::V2018_02_01::Models::TriggeredWebJobStatus
           end
+          def public_certificate_location
+            Azure::Web::Mgmt::V2018_02_01::Models::PublicCertificateLocation
+          end
+          def backup_restore_operation_type
+            Azure::Web::Mgmt::V2018_02_01::Models::BackupRestoreOperationType
+          end
+          def backup_request
+            Azure::Web::Mgmt::V2018_02_01::Models::BackupRequest
+          end
           def sku_name
             Azure::Web::Mgmt::V2018_02_01::Models::SkuName
+          end
+          def restore_request
+            Azure::Web::Mgmt::V2018_02_01::Models::RestoreRequest
+          end
+          def managed_service_identity
+            Azure::Web::Mgmt::V2018_02_01::Models::ManagedServiceIdentity
+          end
+          def deployment
+            Azure::Web::Mgmt::V2018_02_01::Models::Deployment
+          end
+          def snapshot
+            Azure::Web::Mgmt::V2018_02_01::Models::Snapshot
+          end
+          def identifier
+            Azure::Web::Mgmt::V2018_02_01::Models::Identifier
           end
         end
       end
