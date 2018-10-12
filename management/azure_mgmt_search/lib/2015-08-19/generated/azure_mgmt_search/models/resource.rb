@@ -42,7 +42,6 @@ module Azure::Search::Mgmt::V2015_08_19
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'Resource',
           type: {
@@ -50,7 +49,6 @@ module Azure::Search::Mgmt::V2015_08_19
             class_name: 'Resource',
             model_properties: {
               id: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'id',
@@ -59,7 +57,6 @@ module Azure::Search::Mgmt::V2015_08_19
                 }
               },
               name: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'name',
@@ -68,7 +65,6 @@ module Azure::Search::Mgmt::V2015_08_19
                 }
               },
               type: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'type',
@@ -77,7 +73,6 @@ module Azure::Search::Mgmt::V2015_08_19
                 }
               },
               location: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'location',
                 type: {
@@ -85,13 +80,11 @@ module Azure::Search::Mgmt::V2015_08_19
                 }
               },
               tags: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'tags',
                 type: {
                   name: 'Dictionary',
                   value: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'StringElementType',
                       type: {
@@ -101,7 +94,6 @@ module Azure::Search::Mgmt::V2015_08_19
                 }
               },
               identity: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'identity',
                 type: {
