@@ -26,7 +26,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'TrendingVideos/Tile',
           type: {
@@ -34,7 +33,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
             class_name: 'TrendingVideosTile',
             model_properties: {
               query: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'query',
                 default_value: {},
@@ -44,7 +42,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
                 }
               },
               image: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'image',
                 type: {

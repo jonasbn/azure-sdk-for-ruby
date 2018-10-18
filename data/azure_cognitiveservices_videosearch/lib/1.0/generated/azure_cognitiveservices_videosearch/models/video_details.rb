@@ -33,7 +33,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'VideoDetails',
           type: {
@@ -41,7 +40,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
             class_name: 'VideoDetails',
             model_properties: {
               _type: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: '_type',
                 type: {
@@ -49,7 +47,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
                 }
               },
               id: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'id',
@@ -58,7 +55,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
                 }
               },
               web_search_url: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'webSearchUrl',
@@ -67,7 +63,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
                 }
               },
               related_videos: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'relatedVideos',
@@ -77,7 +72,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
                 }
               },
               video_result: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'videoResult',

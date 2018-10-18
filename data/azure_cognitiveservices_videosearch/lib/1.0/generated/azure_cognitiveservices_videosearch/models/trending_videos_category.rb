@@ -26,7 +26,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'TrendingVideos/Category',
           type: {
@@ -34,7 +33,6 @@ module Azure::CognitiveServices::VideoSearch::V1_0
             class_name: 'TrendingVideosCategory',
             model_properties: {
               title: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'title',
                 type: {
@@ -42,13 +40,11 @@ module Azure::CognitiveServices::VideoSearch::V1_0
                 }
               },
               subcategories: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'subcategories',
                 type: {
                   name: 'Sequence',
                   element: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'TrendingVideosSubcategoryElementType',
                       type: {

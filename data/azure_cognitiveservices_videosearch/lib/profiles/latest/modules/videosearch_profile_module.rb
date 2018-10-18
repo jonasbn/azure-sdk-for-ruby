@@ -10,7 +10,6 @@ module Azure::VideoSearch::Profiles::Latest
   module Models
     TrendingVideosCategory = Azure::CognitiveServices::VideoSearch::V1_0::Models::TrendingVideosCategory
     TrendingVideosSubcategory = Azure::CognitiveServices::VideoSearch::V1_0::Models::TrendingVideosSubcategory
-    Error = Azure::CognitiveServices::VideoSearch::V1_0::Models::Error
     PivotSuggestions = Azure::CognitiveServices::VideoSearch::V1_0::Models::PivotSuggestions
     QueryContext = Azure::CognitiveServices::VideoSearch::V1_0::Models::QueryContext
     Query = Azure::CognitiveServices::VideoSearch::V1_0::Models::Query
@@ -40,6 +39,7 @@ module Azure::VideoSearch::Profiles::Latest
     SafeSearch = Azure::CognitiveServices::VideoSearch::V1_0::Models::SafeSearch
     TextFormat = Azure::CognitiveServices::VideoSearch::V1_0::Models::TextFormat
     VideoInsightModule = Azure::CognitiveServices::VideoSearch::V1_0::Models::VideoInsightModule
+    Error = Azure::CognitiveServices::VideoSearch::V1_0::Models::Error
   end
 
   #
@@ -92,9 +92,6 @@ module Azure::VideoSearch::Profiles::Latest
     end
     def trending_videos_subcategory
       Azure::CognitiveServices::VideoSearch::V1_0::Models::TrendingVideosSubcategory
-    end
-    def error
-      Azure::CognitiveServices::VideoSearch::V1_0::Models::Error
     end
     def pivot_suggestions
       Azure::CognitiveServices::VideoSearch::V1_0::Models::PivotSuggestions
@@ -182,6 +179,9 @@ module Azure::VideoSearch::Profiles::Latest
     end
     def video_insight_module
       Azure::CognitiveServices::VideoSearch::V1_0::Models::VideoInsightModule
+    end
+    def error
+      Azure::CognitiveServices::VideoSearch::V1_0::Models::Error
     end
   end
 end
