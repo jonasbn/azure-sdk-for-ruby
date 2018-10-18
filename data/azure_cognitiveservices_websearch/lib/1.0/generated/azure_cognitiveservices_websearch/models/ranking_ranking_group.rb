@@ -23,7 +23,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'Ranking/RankingGroup',
           type: {
@@ -31,13 +30,11 @@ module Azure::CognitiveServices::WebSearch::V1_0
             class_name: 'RankingRankingGroup',
             model_properties: {
               items: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'items',
                 type: {
                   name: 'Sequence',
                   element: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'RankingRankingItemElementType',
                       type: {

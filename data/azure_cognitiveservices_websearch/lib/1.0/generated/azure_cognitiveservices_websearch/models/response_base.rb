@@ -53,7 +53,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'ResponseBase',
           type: {

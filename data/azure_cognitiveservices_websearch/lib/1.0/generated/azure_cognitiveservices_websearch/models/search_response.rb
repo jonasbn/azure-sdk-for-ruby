@@ -70,7 +70,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'SearchResponse',
           type: {
@@ -78,7 +77,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
             class_name: 'SearchResponse',
             model_properties: {
               _type: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: '_type',
                 type: {
@@ -86,7 +84,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               id: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'id',
@@ -95,7 +92,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               web_search_url: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'webSearchUrl',
@@ -104,7 +100,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               query_context: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'queryContext',
@@ -114,7 +109,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               web_pages: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'webPages',
@@ -124,7 +118,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               images: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'images',
@@ -134,7 +127,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               news: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'news',
@@ -144,7 +136,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               related_searches: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'relatedSearches',
@@ -154,7 +145,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               spell_suggestions: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'spellSuggestions',
@@ -164,7 +154,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               time_zone: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'timeZone',
@@ -174,7 +163,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               videos: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'videos',
@@ -184,7 +172,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               computation: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'computation',
@@ -194,7 +181,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               ranking_response: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'rankingResponse',

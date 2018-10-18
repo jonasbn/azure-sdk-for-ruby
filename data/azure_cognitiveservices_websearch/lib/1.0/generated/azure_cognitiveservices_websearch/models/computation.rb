@@ -43,7 +43,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'Computation',
           type: {
@@ -51,7 +50,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
             class_name: 'Computation',
             model_properties: {
               _type: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: '_type',
                 type: {
@@ -59,7 +57,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               id: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'id',
@@ -68,7 +65,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               web_search_url: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'webSearchUrl',
@@ -77,14 +73,12 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               follow_up_queries: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'followUpQueries',
                 type: {
                   name: 'Sequence',
                   element: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'QueryElementType',
                       type: {
@@ -95,7 +89,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               expression: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'expression',
                 type: {
@@ -103,7 +96,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               value: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'value',
                 type: {

@@ -31,7 +31,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'Web/WebGrouping',
           type: {
@@ -41,13 +40,11 @@ module Azure::CognitiveServices::WebSearch::V1_0
             class_name: 'WebWebGrouping',
             model_properties: {
               web_pages: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'webPages',
                 type: {
                   name: 'Sequence',
                   element: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'WebPageElementType',
                       type: {

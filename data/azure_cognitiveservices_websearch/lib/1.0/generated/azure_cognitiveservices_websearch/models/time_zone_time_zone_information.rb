@@ -30,7 +30,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'TimeZone/TimeZoneInformation',
           type: {
@@ -38,7 +37,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
             class_name: 'TimeZoneTimeZoneInformation',
             model_properties: {
               location: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'location',
                 type: {
@@ -46,7 +44,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               time: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'time',
                 type: {
@@ -54,7 +51,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               utc_offset: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'utcOffset',
                 type: {

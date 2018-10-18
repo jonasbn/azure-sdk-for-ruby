@@ -34,7 +34,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'News',
           type: {
@@ -42,7 +41,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
             class_name: 'News',
             model_properties: {
               _type: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: '_type',
                 type: {
@@ -50,7 +48,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               id: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'id',
@@ -59,7 +56,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               web_search_url: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'webSearchUrl',
@@ -68,14 +64,12 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               follow_up_queries: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'followUpQueries',
                 type: {
                   name: 'Sequence',
                   element: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'QueryElementType',
                       type: {
@@ -86,7 +80,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               query_context: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'queryContext',
@@ -96,7 +89,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               total_estimated_matches: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'totalEstimatedMatches',
@@ -105,7 +97,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               is_family_friendly: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'isFamilyFriendly',
@@ -114,13 +105,11 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               value: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'value',
                 type: {
                   name: 'Sequence',
                   element: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'NewsArticleElementType',
                       type: {
@@ -131,7 +120,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               location: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'location',

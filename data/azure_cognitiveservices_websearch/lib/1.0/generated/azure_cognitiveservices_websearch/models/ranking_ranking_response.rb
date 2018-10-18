@@ -33,7 +33,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'Ranking/RankingResponse',
           type: {
@@ -41,7 +40,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
             class_name: 'RankingRankingResponse',
             model_properties: {
               pole: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'pole',
@@ -51,7 +49,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               mainline: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'mainline',
@@ -61,7 +58,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               sidebar: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'sidebar',

@@ -45,7 +45,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'Ranking/RankingItem',
           type: {
@@ -53,7 +52,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
             class_name: 'RankingRankingItem',
             model_properties: {
               answer_type: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'answerType',
                 default_value: 'WebPages',
@@ -62,7 +60,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               result_index: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'resultIndex',
@@ -71,7 +68,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               value: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'value',
@@ -81,7 +77,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               html_index: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'htmlIndex',
@@ -90,7 +85,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               textual_index: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'textualIndex',
@@ -99,7 +93,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               screenshot_index: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'screenshotIndex',

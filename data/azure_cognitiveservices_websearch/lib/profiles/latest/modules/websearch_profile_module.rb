@@ -13,7 +13,6 @@ module Azure::WebSearch::Profiles::Latest
     WebMetaTag = Azure::CognitiveServices::WebSearch::V1_0::Models::WebMetaTag
     RankingRankingResponse = Azure::CognitiveServices::WebSearch::V1_0::Models::RankingRankingResponse
     WebWebGrouping = Azure::CognitiveServices::WebSearch::V1_0::Models::WebWebGrouping
-    Error = Azure::CognitiveServices::WebSearch::V1_0::Models::Error
     Query = Azure::CognitiveServices::WebSearch::V1_0::Models::Query
     TimeZoneTimeZoneInformation = Azure::CognitiveServices::WebSearch::V1_0::Models::TimeZoneTimeZoneInformation
     ResponseBase = Azure::CognitiveServices::WebSearch::V1_0::Models::ResponseBase
@@ -49,6 +48,7 @@ module Azure::WebSearch::Profiles::Latest
     Freshness = Azure::CognitiveServices::WebSearch::V1_0::Models::Freshness
     SafeSearch = Azure::CognitiveServices::WebSearch::V1_0::Models::SafeSearch
     TextFormat = Azure::CognitiveServices::WebSearch::V1_0::Models::TextFormat
+    Error = Azure::CognitiveServices::WebSearch::V1_0::Models::Error
   end
 
   #
@@ -110,9 +110,6 @@ module Azure::WebSearch::Profiles::Latest
     end
     def web_web_grouping
       Azure::CognitiveServices::WebSearch::V1_0::Models::WebWebGrouping
-    end
-    def error
-      Azure::CognitiveServices::WebSearch::V1_0::Models::Error
     end
     def query
       Azure::CognitiveServices::WebSearch::V1_0::Models::Query
@@ -218,6 +215,9 @@ module Azure::WebSearch::Profiles::Latest
     end
     def text_format
       Azure::CognitiveServices::WebSearch::V1_0::Models::TextFormat
+    end
+    def error
+      Azure::CognitiveServices::WebSearch::V1_0::Models::Error
     end
   end
 end

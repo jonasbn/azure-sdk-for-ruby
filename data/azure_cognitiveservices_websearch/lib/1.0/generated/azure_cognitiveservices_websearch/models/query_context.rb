@@ -57,7 +57,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'QueryContext',
           type: {
@@ -65,7 +64,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
             class_name: 'QueryContext',
             model_properties: {
               original_query: {
-                client_side_validation: true,
                 required: true,
                 serialized_name: 'originalQuery',
                 type: {
@@ -73,7 +71,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               altered_query: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'alteredQuery',
@@ -82,7 +79,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               alteration_override_query: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'alterationOverrideQuery',
@@ -91,7 +87,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               adult_intent: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'adultIntent',
@@ -100,7 +95,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               ask_user_for_location: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'askUserForLocation',
@@ -109,7 +103,6 @@ module Azure::CognitiveServices::WebSearch::V1_0
                 }
               },
               is_transactional: {
-                client_side_validation: true,
                 required: false,
                 read_only: true,
                 serialized_name: 'isTransactional',
