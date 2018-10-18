@@ -29,7 +29,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'DomainModelResults',
           type: {
@@ -37,7 +36,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
             class_name: 'DomainModelResults',
             model_properties: {
               result: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'result',
                 type: {
@@ -45,7 +43,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               request_id: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'requestId',
                 type: {
@@ -53,7 +50,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               metadata: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'metadata',
                 type: {

@@ -47,7 +47,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'ImageAnalysis',
           type: {
@@ -55,13 +54,11 @@ module Azure::CognitiveServices::ComputerVision::V2_0
             class_name: 'ImageAnalysis',
             model_properties: {
               categories: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'categories',
                 type: {
                   name: 'Sequence',
                   element: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'CategoryElementType',
                       type: {
@@ -72,7 +69,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               adult: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'adult',
                 type: {
@@ -81,7 +77,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               color: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'color',
                 type: {
@@ -90,7 +85,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               image_type: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'imageType',
                 type: {
@@ -99,13 +93,11 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               tags: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'tags',
                 type: {
                   name: 'Sequence',
                   element: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'ImageTagElementType',
                       type: {
@@ -116,7 +108,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               description: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'description',
                 type: {
@@ -125,13 +116,11 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               faces: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'faces',
                 type: {
                   name: 'Sequence',
                   element: {
-                      client_side_validation: true,
                       required: false,
                       serialized_name: 'FaceDescriptionElementType',
                       type: {
@@ -142,7 +131,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               request_id: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'requestId',
                 type: {
@@ -150,7 +138,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               metadata: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'metadata',
                 type: {

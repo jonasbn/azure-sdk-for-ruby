@@ -25,7 +25,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'LandmarksModel',
           type: {
@@ -33,7 +32,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
             class_name: 'LandmarksModel',
             model_properties: {
               name: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'name',
                 type: {
@@ -41,7 +39,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               confidence: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'confidence',
                 type: {

@@ -24,16 +24,15 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # subscription.
     attr_accessor :credentials
 
-    # @return [String] The preferred language for the response.
+    # @return [String] Gets or sets the preferred language for the response.
     attr_accessor :accept_language
 
-    # @return [Integer] The retry timeout in seconds for Long Running
-    # Operations. Default value is 30.
+    # @return [Integer] Gets or sets the retry timeout in seconds for Long
+    # Running Operations. Default value is 30.
     attr_accessor :long_running_operation_retry_timeout
 
-    # @return [Boolean] Whether a unique x-ms-client-request-id should be
-    # generated. When set to true a unique x-ms-client-request-id value is
-    # generated and included in each request. Default is true.
+    # @return [Boolean] When set to true a unique x-ms-client-request-id value
+    # is generated and included in each request. Default is true.
     attr_accessor :generate_client_request_id
 
     #
@@ -100,9 +99,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       fail ArgumentError, 'path is nil' if path.nil?
 
       request_url = options[:base_url] || @base_url
-      if(!options[:headers].nil? && !options[:headers]['Content-Type'].nil?)
-        @request_headers['Content-Type'] = options[:headers]['Content-Type']
-      end
 
       request_headers = @request_headers
       request_headers.merge!({'accept-language' => @accept_language}) unless @accept_language.nil?
@@ -124,8 +120,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [ListModelsResult] operation results.
     #
-    def list_models(custom_headers:nil)
-      response = list_models_async(custom_headers:custom_headers).value!
+    def list_models(custom_headers = nil)
+      response = list_models_async(custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -141,8 +137,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def list_models_with_http_info(custom_headers:nil)
-      list_models_async(custom_headers:custom_headers).value!
+    def list_models_with_http_info(custom_headers = nil)
+      list_models_async(custom_headers).value!
     end
 
     #
@@ -157,12 +153,11 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def list_models_async(custom_headers:nil)
+    def list_models_async(custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
@@ -239,8 +234,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [ImageAnalysis] operation results.
     #
-    def analyze_image(url, visual_features:nil, details:nil, language:nil, custom_headers:nil)
-      response = analyze_image_async(url, visual_features:visual_features, details:details, language:language, custom_headers:custom_headers).value!
+    def analyze_image(url, visual_features = nil, details = nil, language = nil, custom_headers = nil)
+      response = analyze_image_async(url, visual_features, details, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -277,8 +272,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def analyze_image_with_http_info(url, visual_features:nil, details:nil, language:nil, custom_headers:nil)
-      analyze_image_async(url, visual_features:visual_features, details:details, language:language, custom_headers:custom_headers).value!
+    def analyze_image_with_http_info(url, visual_features = nil, details = nil, language = nil, custom_headers = nil)
+      analyze_image_async(url, visual_features, details, language, custom_headers).value!
     end
 
     #
@@ -314,7 +309,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def analyze_image_async(url, visual_features:nil, details:nil, language:nil, custom_headers:nil)
+    def analyze_image_async(url, visual_features = nil, details = nil, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'url is nil' if url.nil?
 
@@ -324,11 +319,12 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       end
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
+
+      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Serialize Request
       request_mapper = Azure::CognitiveServices::ComputerVision::V2_0::Models::ImageUrl.mapper()
@@ -396,8 +392,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [NOT_IMPLEMENTED] operation results.
     #
-    def generate_thumbnail(width, height, url, smart_cropping:false, custom_headers:nil)
-      response = generate_thumbnail_async(width, height, url, smart_cropping:smart_cropping, custom_headers:custom_headers).value!
+    def generate_thumbnail(width, height, url, smart_cropping = false, custom_headers = nil)
+      response = generate_thumbnail_async(width, height, url, smart_cropping, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -421,8 +417,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def generate_thumbnail_with_http_info(width, height, url, smart_cropping:false, custom_headers:nil)
-      generate_thumbnail_async(width, height, url, smart_cropping:smart_cropping, custom_headers:custom_headers).value!
+    def generate_thumbnail_with_http_info(width, height, url, smart_cropping = false, custom_headers = nil)
+      generate_thumbnail_async(width, height, url, smart_cropping, custom_headers).value!
     end
 
     #
@@ -445,14 +441,10 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def generate_thumbnail_async(width, height, url, smart_cropping:false, custom_headers:nil)
+    def generate_thumbnail_async(width, height, url, smart_cropping = false, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'width is nil' if width.nil?
-      fail ArgumentError, "'width' should satisfy the constraint - 'InclusiveMaximum': '1023'" if !width.nil? && width > 1023
-      fail ArgumentError, "'width' should satisfy the constraint - 'InclusiveMinimum': '1'" if !width.nil? && width < 1
       fail ArgumentError, 'height is nil' if height.nil?
-      fail ArgumentError, "'height' should satisfy the constraint - 'InclusiveMaximum': '1023'" if !height.nil? && height > 1023
-      fail ArgumentError, "'height' should satisfy the constraint - 'InclusiveMinimum': '1'" if !height.nil? && height < 1
       fail ArgumentError, 'url is nil' if url.nil?
 
       image_url = ImageUrl.new
@@ -461,11 +453,12 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       end
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
+
+      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Serialize Request
       request_mapper = Azure::CognitiveServices::ComputerVision::V2_0::Models::ImageUrl.mapper()
@@ -501,7 +494,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
           begin
             parsed_response = response_content.to_s.empty? ? nil : JSON.load(response_content)
             result_mapper = {
-              client_side_validation: true,
               required: false,
               serialized_name: 'parsed_response',
               type: {
@@ -543,8 +535,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [OcrResult] operation results.
     #
-    def recognize_printed_text(detect_orientation, url, language:nil, custom_headers:nil)
-      response = recognize_printed_text_async(detect_orientation, url, language:language, custom_headers:custom_headers).value!
+    def recognize_printed_text(detect_orientation, url, language = nil, custom_headers = nil)
+      response = recognize_printed_text_async(detect_orientation, url, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -571,8 +563,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def recognize_printed_text_with_http_info(detect_orientation, url, language:nil, custom_headers:nil)
-      recognize_printed_text_async(detect_orientation, url, language:language, custom_headers:custom_headers).value!
+    def recognize_printed_text_with_http_info(detect_orientation, url, language = nil, custom_headers = nil)
+      recognize_printed_text_async(detect_orientation, url, language, custom_headers).value!
     end
 
     #
@@ -598,7 +590,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def recognize_printed_text_async(detect_orientation, url, language:nil, custom_headers:nil)
+    def recognize_printed_text_async(detect_orientation, url, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'detect_orientation is nil' if detect_orientation.nil?
       fail ArgumentError, 'url is nil' if url.nil?
@@ -609,11 +601,12 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       end
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
+
+      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Serialize Request
       request_mapper = Azure::CognitiveServices::ComputerVision::V2_0::Models::ImageUrl.mapper()
@@ -672,8 +665,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # an error code and a message to help understand what went wrong.
     #
     # @param url [String] Publicly reachable URL of an image
-    # @param max_candidates [String] Maximum number of candidate descriptions to be
-    # returned.  The default is 1.
+    # @param max_candidates [Integer] Maximum number of candidate descriptions to
+    # be returned.  The default is 1.
     # @param language [Enum] The desired language for output generation. If this
     # parameter is not specified, the default value is &quot;en&quot;.Supported
     # languages:en - English, Default. es - Spanish, ja - Japanese, pt -
@@ -684,8 +677,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [ImageDescription] operation results.
     #
-    def describe_image(url, max_candidates:'1', language:nil, custom_headers:nil)
-      response = describe_image_async(url, max_candidates:max_candidates, language:language, custom_headers:custom_headers).value!
+    def describe_image(url, max_candidates = 1, language = nil, custom_headers = nil)
+      response = describe_image_async(url, max_candidates, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -700,8 +693,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # an error code and a message to help understand what went wrong.
     #
     # @param url [String] Publicly reachable URL of an image
-    # @param max_candidates [String] Maximum number of candidate descriptions to be
-    # returned.  The default is 1.
+    # @param max_candidates [Integer] Maximum number of candidate descriptions to
+    # be returned.  The default is 1.
     # @param language [Enum] The desired language for output generation. If this
     # parameter is not specified, the default value is &quot;en&quot;.Supported
     # languages:en - English, Default. es - Spanish, ja - Japanese, pt -
@@ -712,8 +705,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def describe_image_with_http_info(url, max_candidates:'1', language:nil, custom_headers:nil)
-      describe_image_async(url, max_candidates:max_candidates, language:language, custom_headers:custom_headers).value!
+    def describe_image_with_http_info(url, max_candidates = 1, language = nil, custom_headers = nil)
+      describe_image_async(url, max_candidates, language, custom_headers).value!
     end
 
     #
@@ -727,8 +720,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # an error code and a message to help understand what went wrong.
     #
     # @param url [String] Publicly reachable URL of an image
-    # @param max_candidates [String] Maximum number of candidate descriptions to be
-    # returned.  The default is 1.
+    # @param max_candidates [Integer] Maximum number of candidate descriptions to
+    # be returned.  The default is 1.
     # @param language [Enum] The desired language for output generation. If this
     # parameter is not specified, the default value is &quot;en&quot;.Supported
     # languages:en - English, Default. es - Spanish, ja - Japanese, pt -
@@ -739,7 +732,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def describe_image_async(url, max_candidates:'1', language:nil, custom_headers:nil)
+    def describe_image_async(url, max_candidates = 1, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'url is nil' if url.nil?
 
@@ -749,11 +742,12 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       end
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
+
+      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Serialize Request
       request_mapper = Azure::CognitiveServices::ComputerVision::V2_0::Models::ImageUrl.mapper()
@@ -821,8 +815,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [TagResult] operation results.
     #
-    def tag_image(url, language:nil, custom_headers:nil)
-      response = tag_image_async(url, language:language, custom_headers:custom_headers).value!
+    def tag_image(url, language = nil, custom_headers = nil)
+      response = tag_image_async(url, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -846,8 +840,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def tag_image_with_http_info(url, language:nil, custom_headers:nil)
-      tag_image_async(url, language:language, custom_headers:custom_headers).value!
+    def tag_image_with_http_info(url, language = nil, custom_headers = nil)
+      tag_image_async(url, language, custom_headers).value!
     end
 
     #
@@ -870,7 +864,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def tag_image_async(url, language:nil, custom_headers:nil)
+    def tag_image_async(url, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'url is nil' if url.nil?
 
@@ -880,11 +874,12 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       end
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
+
+      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Serialize Request
       request_mapper = Azure::CognitiveServices::ComputerVision::V2_0::Models::ImageUrl.mapper()
@@ -954,8 +949,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [DomainModelResults] operation results.
     #
-    def analyze_image_by_domain(model, url, language:nil, custom_headers:nil)
-      response = analyze_image_by_domain_async(model, url, language:language, custom_headers:custom_headers).value!
+    def analyze_image_by_domain(model, url, language = nil, custom_headers = nil)
+      response = analyze_image_by_domain_async(model, url, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -981,8 +976,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def analyze_image_by_domain_with_http_info(model, url, language:nil, custom_headers:nil)
-      analyze_image_by_domain_async(model, url, language:language, custom_headers:custom_headers).value!
+    def analyze_image_by_domain_with_http_info(model, url, language = nil, custom_headers = nil)
+      analyze_image_by_domain_async(model, url, language, custom_headers).value!
     end
 
     #
@@ -1007,7 +1002,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def analyze_image_by_domain_async(model, url, language:nil, custom_headers:nil)
+    def analyze_image_by_domain_async(model, url, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'model is nil' if model.nil?
       fail ArgumentError, 'url is nil' if url.nil?
@@ -1018,11 +1013,12 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       end
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
+
+      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Serialize Request
       request_mapper = Azure::CognitiveServices::ComputerVision::V2_0::Models::ImageUrl.mapper()
@@ -1084,8 +1080,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # will be added to the HTTP request.
     #
     #
-    def recognize_text(url, mode, custom_headers:nil)
-      response = recognize_text_async(url, mode, custom_headers:custom_headers).value!
+    def recognize_text(url, mode, custom_headers = nil)
+      response = recognize_text_async(url, mode, custom_headers).value!
       nil
     end
 
@@ -1103,8 +1099,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def recognize_text_with_http_info(url, mode, custom_headers:nil)
-      recognize_text_async(url, mode, custom_headers:custom_headers).value!
+    def recognize_text_with_http_info(url, mode, custom_headers = nil)
+      recognize_text_async(url, mode, custom_headers).value!
     end
 
     #
@@ -1121,7 +1117,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def recognize_text_async(url, mode, custom_headers:nil)
+    def recognize_text_async(url, mode, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'mode is nil' if mode.nil?
       fail ArgumentError, 'url is nil' if url.nil?
@@ -1132,11 +1128,12 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       end
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
+
+      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Serialize Request
       request_mapper = Azure::CognitiveServices::ComputerVision::V2_0::Models::ImageUrl.mapper()
@@ -1186,8 +1183,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [TextOperationResult] operation results.
     #
-    def get_text_operation_result(operation_id, custom_headers:nil)
-      response = get_text_operation_result_async(operation_id, custom_headers:custom_headers).value!
+    def get_text_operation_result(operation_id, custom_headers = nil)
+      response = get_text_operation_result_async(operation_id, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -1203,8 +1200,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def get_text_operation_result_with_http_info(operation_id, custom_headers:nil)
-      get_text_operation_result_async(operation_id, custom_headers:custom_headers).value!
+    def get_text_operation_result_with_http_info(operation_id, custom_headers = nil)
+      get_text_operation_result_async(operation_id, custom_headers).value!
     end
 
     #
@@ -1219,13 +1216,12 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def get_text_operation_result_async(operation_id, custom_headers:nil)
+    def get_text_operation_result_async(operation_id, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'operation_id is nil' if operation_id.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/json; charset=utf-8'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
@@ -1286,10 +1282,10 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # the accent color, dominant color, and whether an image is black&white.Adult -
     # detects if the image is pornographic in nature (depicts nudity or a sex act).
     # Sexually suggestive content is also detected.
-    # @param details [Enum] A string indicating which domain-specific details to
-    # return. Multiple values should be comma-separated. Valid visual feature types
-    # include:Celebrities - identifies celebrities if detected in the image.
-    # Possible values include: 'Celebrities', 'Landmarks'
+    # @param details [Array<Details>] A string indicating which domain-specific
+    # details to return. Multiple values should be comma-separated. Valid visual
+    # feature types include:Celebrities - identifies celebrities if detected in the
+    # image.
     # @param language [Enum] The desired language for output generation. If this
     # parameter is not specified, the default value is &quot;en&quot;.Supported
     # languages:en - English, Default. es - Spanish, ja - Japanese, pt -
@@ -1300,8 +1296,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [ImageAnalysis] operation results.
     #
-    def analyze_image_in_stream(image, visual_features:nil, details:nil, language:nil, custom_headers:nil)
-      response = analyze_image_in_stream_async(image, visual_features:visual_features, details:details, language:language, custom_headers:custom_headers).value!
+    def analyze_image_in_stream(image, visual_features = nil, details = nil, language = nil, custom_headers = nil)
+      response = analyze_image_in_stream_async(image, visual_features, details, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -1321,10 +1317,10 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # the accent color, dominant color, and whether an image is black&white.Adult -
     # detects if the image is pornographic in nature (depicts nudity or a sex act).
     # Sexually suggestive content is also detected.
-    # @param details [Enum] A string indicating which domain-specific details to
-    # return. Multiple values should be comma-separated. Valid visual feature types
-    # include:Celebrities - identifies celebrities if detected in the image.
-    # Possible values include: 'Celebrities', 'Landmarks'
+    # @param details [Array<Details>] A string indicating which domain-specific
+    # details to return. Multiple values should be comma-separated. Valid visual
+    # feature types include:Celebrities - identifies celebrities if detected in the
+    # image.
     # @param language [Enum] The desired language for output generation. If this
     # parameter is not specified, the default value is &quot;en&quot;.Supported
     # languages:en - English, Default. es - Spanish, ja - Japanese, pt -
@@ -1335,8 +1331,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def analyze_image_in_stream_with_http_info(image, visual_features:nil, details:nil, language:nil, custom_headers:nil)
-      analyze_image_in_stream_async(image, visual_features:visual_features, details:details, language:language, custom_headers:custom_headers).value!
+    def analyze_image_in_stream_with_http_info(image, visual_features = nil, details = nil, language = nil, custom_headers = nil)
+      analyze_image_in_stream_async(image, visual_features, details, language, custom_headers).value!
     end
 
     #
@@ -1355,10 +1351,10 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # the accent color, dominant color, and whether an image is black&white.Adult -
     # detects if the image is pornographic in nature (depicts nudity or a sex act).
     # Sexually suggestive content is also detected.
-    # @param details [Enum] A string indicating which domain-specific details to
-    # return. Multiple values should be comma-separated. Valid visual feature types
-    # include:Celebrities - identifies celebrities if detected in the image.
-    # Possible values include: 'Celebrities', 'Landmarks'
+    # @param details [Array<Details>] A string indicating which domain-specific
+    # details to return. Multiple values should be comma-separated. Valid visual
+    # feature types include:Celebrities - identifies celebrities if detected in the
+    # image.
     # @param language [Enum] The desired language for output generation. If this
     # parameter is not specified, the default value is &quot;en&quot;.Supported
     # languages:en - English, Default. es - Spanish, ja - Japanese, pt -
@@ -1369,21 +1365,21 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def analyze_image_in_stream_async(image, visual_features:nil, details:nil, language:nil, custom_headers:nil)
+    def analyze_image_in_stream_async(image, visual_features = nil, details = nil, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'image is nil' if image.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/octet-stream'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
 
+      request_headers['Content-Type'] = 'application/octet-stream'
+
       # Serialize Request
       request_mapper = {
-        client_side_validation: true,
         required: true,
         serialized_name: 'Image',
         type: {
@@ -1391,6 +1387,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
         }
       }
       request_content = self.serialize(request_mapper,  image)
+      request_content = request_content != nil ? JSON.generate(request_content, quirks_mode: true) : nil
 
       path_template = 'analyze'
 
@@ -1399,7 +1396,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
 
       options = {
           middlewares: [[MsRest::RetryPolicyMiddleware, times: 3, retry: 0.02], [:cookie_jar]],
-          query_params: {'visualFeatures' => visual_features.nil? ? nil : visual_features.join(','),'details' => details,'language' => language},
+          query_params: {'visualFeatures' => visual_features.nil? ? nil : visual_features.join(','),'details' => details.nil? ? nil : details.join(','),'language' => language},
           body: request_content,
           headers: request_headers.merge(custom_headers || {}),
           base_url: request_url
@@ -1453,8 +1450,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [NOT_IMPLEMENTED] operation results.
     #
-    def generate_thumbnail_in_stream(width, height, image, smart_cropping:false, custom_headers:nil)
-      response = generate_thumbnail_in_stream_async(width, height, image, smart_cropping:smart_cropping, custom_headers:custom_headers).value!
+    def generate_thumbnail_in_stream(width, height, image, smart_cropping = false, custom_headers = nil)
+      response = generate_thumbnail_in_stream_async(width, height, image, smart_cropping, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -1478,8 +1475,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def generate_thumbnail_in_stream_with_http_info(width, height, image, smart_cropping:false, custom_headers:nil)
-      generate_thumbnail_in_stream_async(width, height, image, smart_cropping:smart_cropping, custom_headers:custom_headers).value!
+    def generate_thumbnail_in_stream_with_http_info(width, height, image, smart_cropping = false, custom_headers = nil)
+      generate_thumbnail_in_stream_async(width, height, image, smart_cropping, custom_headers).value!
     end
 
     #
@@ -1502,27 +1499,23 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def generate_thumbnail_in_stream_async(width, height, image, smart_cropping:false, custom_headers:nil)
+    def generate_thumbnail_in_stream_async(width, height, image, smart_cropping = false, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'width is nil' if width.nil?
-      fail ArgumentError, "'width' should satisfy the constraint - 'InclusiveMaximum': '1023'" if !width.nil? && width > 1023
-      fail ArgumentError, "'width' should satisfy the constraint - 'InclusiveMinimum': '1'" if !width.nil? && width < 1
       fail ArgumentError, 'height is nil' if height.nil?
-      fail ArgumentError, "'height' should satisfy the constraint - 'InclusiveMaximum': '1023'" if !height.nil? && height > 1023
-      fail ArgumentError, "'height' should satisfy the constraint - 'InclusiveMinimum': '1'" if !height.nil? && height < 1
       fail ArgumentError, 'image is nil' if image.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/octet-stream'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
 
+      request_headers['Content-Type'] = 'application/octet-stream'
+
       # Serialize Request
       request_mapper = {
-        client_side_validation: true,
         required: true,
         serialized_name: 'Image',
         type: {
@@ -1530,6 +1523,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
         }
       }
       request_content = self.serialize(request_mapper,  image)
+      request_content = request_content != nil ? JSON.generate(request_content, quirks_mode: true) : nil
 
       path_template = 'generateThumbnail'
 
@@ -1560,7 +1554,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
           begin
             parsed_response = response_content.to_s.empty? ? nil : JSON.load(response_content)
             result_mapper = {
-              client_side_validation: true,
               required: false,
               serialized_name: 'parsed_response',
               type: {
@@ -1602,8 +1595,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [OcrResult] operation results.
     #
-    def recognize_printed_text_in_stream(detect_orientation, image, language:nil, custom_headers:nil)
-      response = recognize_printed_text_in_stream_async(detect_orientation, image, language:language, custom_headers:custom_headers).value!
+    def recognize_printed_text_in_stream(detect_orientation, image, language = nil, custom_headers = nil)
+      response = recognize_printed_text_in_stream_async(detect_orientation, image, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -1630,8 +1623,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def recognize_printed_text_in_stream_with_http_info(detect_orientation, image, language:nil, custom_headers:nil)
-      recognize_printed_text_in_stream_async(detect_orientation, image, language:language, custom_headers:custom_headers).value!
+    def recognize_printed_text_in_stream_with_http_info(detect_orientation, image, language = nil, custom_headers = nil)
+      recognize_printed_text_in_stream_async(detect_orientation, image, language, custom_headers).value!
     end
 
     #
@@ -1657,22 +1650,22 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def recognize_printed_text_in_stream_async(detect_orientation, image, language:nil, custom_headers:nil)
+    def recognize_printed_text_in_stream_async(detect_orientation, image, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'detect_orientation is nil' if detect_orientation.nil?
       fail ArgumentError, 'image is nil' if image.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/octet-stream'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
 
+      request_headers['Content-Type'] = 'application/octet-stream'
+
       # Serialize Request
       request_mapper = {
-        client_side_validation: true,
         required: true,
         serialized_name: 'Image',
         type: {
@@ -1680,6 +1673,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
         }
       }
       request_content = self.serialize(request_mapper,  image)
+      request_content = request_content != nil ? JSON.generate(request_content, quirks_mode: true) : nil
 
       path_template = 'ocr'
 
@@ -1733,8 +1727,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # an error code and a message to help understand what went wrong.
     #
     # @param image An image stream.
-    # @param max_candidates [String] Maximum number of candidate descriptions to be
-    # returned.  The default is 1.
+    # @param max_candidates [Integer] Maximum number of candidate descriptions to
+    # be returned.  The default is 1.
     # @param language [Enum] The desired language for output generation. If this
     # parameter is not specified, the default value is &quot;en&quot;.Supported
     # languages:en - English, Default. es - Spanish, ja - Japanese, pt -
@@ -1745,8 +1739,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [ImageDescription] operation results.
     #
-    def describe_image_in_stream(image, max_candidates:'1', language:nil, custom_headers:nil)
-      response = describe_image_in_stream_async(image, max_candidates:max_candidates, language:language, custom_headers:custom_headers).value!
+    def describe_image_in_stream(image, max_candidates = 1, language = nil, custom_headers = nil)
+      response = describe_image_in_stream_async(image, max_candidates, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -1761,8 +1755,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # an error code and a message to help understand what went wrong.
     #
     # @param image An image stream.
-    # @param max_candidates [String] Maximum number of candidate descriptions to be
-    # returned.  The default is 1.
+    # @param max_candidates [Integer] Maximum number of candidate descriptions to
+    # be returned.  The default is 1.
     # @param language [Enum] The desired language for output generation. If this
     # parameter is not specified, the default value is &quot;en&quot;.Supported
     # languages:en - English, Default. es - Spanish, ja - Japanese, pt -
@@ -1773,8 +1767,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def describe_image_in_stream_with_http_info(image, max_candidates:'1', language:nil, custom_headers:nil)
-      describe_image_in_stream_async(image, max_candidates:max_candidates, language:language, custom_headers:custom_headers).value!
+    def describe_image_in_stream_with_http_info(image, max_candidates = 1, language = nil, custom_headers = nil)
+      describe_image_in_stream_async(image, max_candidates, language, custom_headers).value!
     end
 
     #
@@ -1788,8 +1782,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # an error code and a message to help understand what went wrong.
     #
     # @param image An image stream.
-    # @param max_candidates [String] Maximum number of candidate descriptions to be
-    # returned.  The default is 1.
+    # @param max_candidates [Integer] Maximum number of candidate descriptions to
+    # be returned.  The default is 1.
     # @param language [Enum] The desired language for output generation. If this
     # parameter is not specified, the default value is &quot;en&quot;.Supported
     # languages:en - English, Default. es - Spanish, ja - Japanese, pt -
@@ -1800,21 +1794,21 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def describe_image_in_stream_async(image, max_candidates:'1', language:nil, custom_headers:nil)
+    def describe_image_in_stream_async(image, max_candidates = 1, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'image is nil' if image.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/octet-stream'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
 
+      request_headers['Content-Type'] = 'application/octet-stream'
+
       # Serialize Request
       request_mapper = {
-        client_side_validation: true,
         required: true,
         serialized_name: 'Image',
         type: {
@@ -1822,6 +1816,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
         }
       }
       request_content = self.serialize(request_mapper,  image)
+      request_content = request_content != nil ? JSON.generate(request_content, quirks_mode: true) : nil
 
       path_template = 'describe'
 
@@ -1884,8 +1879,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [TagResult] operation results.
     #
-    def tag_image_in_stream(image, language:nil, custom_headers:nil)
-      response = tag_image_in_stream_async(image, language:language, custom_headers:custom_headers).value!
+    def tag_image_in_stream(image, language = nil, custom_headers = nil)
+      response = tag_image_in_stream_async(image, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -1909,8 +1904,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def tag_image_in_stream_with_http_info(image, language:nil, custom_headers:nil)
-      tag_image_in_stream_async(image, language:language, custom_headers:custom_headers).value!
+    def tag_image_in_stream_with_http_info(image, language = nil, custom_headers = nil)
+      tag_image_in_stream_async(image, language, custom_headers).value!
     end
 
     #
@@ -1933,21 +1928,21 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def tag_image_in_stream_async(image, language:nil, custom_headers:nil)
+    def tag_image_in_stream_async(image, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'image is nil' if image.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/octet-stream'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
 
+      request_headers['Content-Type'] = 'application/octet-stream'
+
       # Serialize Request
       request_mapper = {
-        client_side_validation: true,
         required: true,
         serialized_name: 'Image',
         type: {
@@ -1955,6 +1950,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
         }
       }
       request_content = self.serialize(request_mapper,  image)
+      request_content = request_content != nil ? JSON.generate(request_content, quirks_mode: true) : nil
 
       path_template = 'tag'
 
@@ -2019,8 +2015,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [DomainModelResults] operation results.
     #
-    def analyze_image_by_domain_in_stream(model, image, language:nil, custom_headers:nil)
-      response = analyze_image_by_domain_in_stream_async(model, image, language:language, custom_headers:custom_headers).value!
+    def analyze_image_by_domain_in_stream(model, image, language = nil, custom_headers = nil)
+      response = analyze_image_by_domain_in_stream_async(model, image, language, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -2046,8 +2042,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def analyze_image_by_domain_in_stream_with_http_info(model, image, language:nil, custom_headers:nil)
-      analyze_image_by_domain_in_stream_async(model, image, language:language, custom_headers:custom_headers).value!
+    def analyze_image_by_domain_in_stream_with_http_info(model, image, language = nil, custom_headers = nil)
+      analyze_image_by_domain_in_stream_async(model, image, language, custom_headers).value!
     end
 
     #
@@ -2072,22 +2068,22 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def analyze_image_by_domain_in_stream_async(model, image, language:nil, custom_headers:nil)
+    def analyze_image_by_domain_in_stream_async(model, image, language = nil, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'model is nil' if model.nil?
       fail ArgumentError, 'image is nil' if image.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/octet-stream'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
 
+      request_headers['Content-Type'] = 'application/octet-stream'
+
       # Serialize Request
       request_mapper = {
-        client_side_validation: true,
         required: true,
         serialized_name: 'Image',
         type: {
@@ -2095,6 +2091,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
         }
       }
       request_content = self.serialize(request_mapper,  image)
+      request_content = request_content != nil ? JSON.generate(request_content, quirks_mode: true) : nil
 
       path_template = 'models/{model}/analyze'
 
@@ -2151,8 +2148,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     # will be added to the HTTP request.
     #
     #
-    def recognize_text_in_stream(image, mode, custom_headers:nil)
-      response = recognize_text_in_stream_async(image, mode, custom_headers:custom_headers).value!
+    def recognize_text_in_stream(image, mode, custom_headers = nil)
+      response = recognize_text_in_stream_async(image, mode, custom_headers).value!
       nil
     end
 
@@ -2170,8 +2167,8 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def recognize_text_in_stream_with_http_info(image, mode, custom_headers:nil)
-      recognize_text_in_stream_async(image, mode, custom_headers:custom_headers).value!
+    def recognize_text_in_stream_with_http_info(image, mode, custom_headers = nil)
+      recognize_text_in_stream_async(image, mode, custom_headers).value!
     end
 
     #
@@ -2188,22 +2185,22 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def recognize_text_in_stream_async(image, mode, custom_headers:nil)
+    def recognize_text_in_stream_async(image, mode, custom_headers = nil)
       fail ArgumentError, 'endpoint is nil' if endpoint.nil?
       fail ArgumentError, 'image is nil' if image.nil?
       fail ArgumentError, 'mode is nil' if mode.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/octet-stream'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
       request_headers['accept-language'] = accept_language unless accept_language.nil?
 
+      request_headers['Content-Type'] = 'application/octet-stream'
+
       # Serialize Request
       request_mapper = {
-        client_side_validation: true,
         required: true,
         serialized_name: 'Image',
         type: {
@@ -2211,6 +2208,7 @@ module Azure::CognitiveServices::ComputerVision::V2_0
         }
       }
       request_content = self.serialize(request_mapper,  image)
+      request_content = request_content != nil ? JSON.generate(request_content, quirks_mode: true) : nil
 
       path_template = 'recognizeText'
 
@@ -2250,7 +2248,9 @@ module Azure::CognitiveServices::ComputerVision::V2_0
     #
     def add_telemetry
         sdk_information = 'azure_cognitiveservices_computervision'
-        sdk_information = "#{sdk_information}/0.17.0"
+        if defined? Azure::CognitiveServices::ComputerVision::V2_0::VERSION
+          sdk_information = "#{sdk_information}/#{Azure::CognitiveServices::ComputerVision::V2_0::VERSION}"
+        end
         add_user_agent_information(sdk_information)
     end
   end

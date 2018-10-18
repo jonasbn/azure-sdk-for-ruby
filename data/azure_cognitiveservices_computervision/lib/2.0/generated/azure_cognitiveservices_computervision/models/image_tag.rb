@@ -28,7 +28,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
       #
       def self.mapper()
         {
-          client_side_validation: true,
           required: false,
           serialized_name: 'ImageTag',
           type: {
@@ -36,7 +35,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
             class_name: 'ImageTag',
             model_properties: {
               name: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'name',
                 type: {
@@ -44,7 +42,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               confidence: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'confidence',
                 type: {
@@ -52,7 +49,6 @@ module Azure::CognitiveServices::ComputerVision::V2_0
                 }
               },
               hint: {
-                client_side_validation: true,
                 required: false,
                 serialized_name: 'hint',
                 type: {
