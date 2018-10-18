@@ -21,16 +21,15 @@ module Azure::CognitiveServices::SpellCheck::V1_0
     # subscription.
     attr_accessor :credentials
 
-    # @return [String] The preferred language for the response.
+    # @return [String] Gets or sets the preferred language for the response.
     attr_accessor :accept_language
 
-    # @return [Integer] The retry timeout in seconds for Long Running
-    # Operations. Default value is 30.
+    # @return [Integer] Gets or sets the retry timeout in seconds for Long
+    # Running Operations. Default value is 30.
     attr_accessor :long_running_operation_retry_timeout
 
-    # @return [Boolean] Whether a unique x-ms-client-request-id should be
-    # generated. When set to true a unique x-ms-client-request-id value is
-    # generated and included in each request. Default is true.
+    # @return [Boolean] When set to true a unique x-ms-client-request-id value
+    # is generated and included in each request. Default is true.
     attr_accessor :generate_client_request_id
 
     #
@@ -98,9 +97,6 @@ module Azure::CognitiveServices::SpellCheck::V1_0
       fail ArgumentError, 'path is nil' if path.nil?
 
       request_url = options[:base_url] || @base_url
-      if(!options[:headers].nil? && !options[:headers]['Content-Type'].nil?)
-        @request_headers['Content-Type'] = options[:headers]['Content-Type']
-      end
 
       request_headers = @request_headers
       request_headers.merge!({'accept-language' => @accept_language}) unless @accept_language.nil?
@@ -303,8 +299,8 @@ module Azure::CognitiveServices::SpellCheck::V1_0
     #
     # @return [SpellCheck] operation results.
     #
-    def spell_checker(text, accept_language:nil, pragma:nil, user_agent:nil, client_id:nil, client_ip:nil, location:nil, action_type:nil, app_name:nil, country_code:nil, client_machine_name:nil, doc_id:nil, market:nil, session_id:nil, set_lang:nil, user_id:nil, mode:nil, pre_context_text:nil, post_context_text:nil, custom_headers:nil)
-      response = spell_checker_async(text, accept_language:accept_language, pragma:pragma, user_agent:user_agent, client_id:client_id, client_ip:client_ip, location:location, action_type:action_type, app_name:app_name, country_code:country_code, client_machine_name:client_machine_name, doc_id:doc_id, market:market, session_id:session_id, set_lang:set_lang, user_id:user_id, mode:mode, pre_context_text:pre_context_text, post_context_text:post_context_text, custom_headers:custom_headers).value!
+    def spell_checker(text, accept_language = nil, pragma = nil, user_agent = nil, client_id = nil, client_ip = nil, location = nil, action_type = nil, app_name = nil, country_code = nil, client_machine_name = nil, doc_id = nil, market = nil, session_id = nil, set_lang = nil, user_id = nil, mode = nil, pre_context_text = nil, post_context_text = nil, custom_headers = nil)
+      response = spell_checker_async(text, accept_language, pragma, user_agent, client_id, client_ip, location, action_type, app_name, country_code, client_machine_name, doc_id, market, session_id, set_lang, user_id, mode, pre_context_text, post_context_text, custom_headers).value!
       response.body unless response.nil?
     end
 
@@ -501,8 +497,8 @@ module Azure::CognitiveServices::SpellCheck::V1_0
     #
     # @return [MsRestAzure::AzureOperationResponse] HTTP response information.
     #
-    def spell_checker_with_http_info(text, accept_language:nil, pragma:nil, user_agent:nil, client_id:nil, client_ip:nil, location:nil, action_type:nil, app_name:nil, country_code:nil, client_machine_name:nil, doc_id:nil, market:nil, session_id:nil, set_lang:nil, user_id:nil, mode:nil, pre_context_text:nil, post_context_text:nil, custom_headers:nil)
-      spell_checker_async(text, accept_language:accept_language, pragma:pragma, user_agent:user_agent, client_id:client_id, client_ip:client_ip, location:location, action_type:action_type, app_name:app_name, country_code:country_code, client_machine_name:client_machine_name, doc_id:doc_id, market:market, session_id:session_id, set_lang:set_lang, user_id:user_id, mode:mode, pre_context_text:pre_context_text, post_context_text:post_context_text, custom_headers:custom_headers).value!
+    def spell_checker_with_http_info(text, accept_language = nil, pragma = nil, user_agent = nil, client_id = nil, client_ip = nil, location = nil, action_type = nil, app_name = nil, country_code = nil, client_machine_name = nil, doc_id = nil, market = nil, session_id = nil, set_lang = nil, user_id = nil, mode = nil, pre_context_text = nil, post_context_text = nil, custom_headers = nil)
+      spell_checker_async(text, accept_language, pragma, user_agent, client_id, client_ip, location, action_type, app_name, country_code, client_machine_name, doc_id, market, session_id, set_lang, user_id, mode, pre_context_text, post_context_text, custom_headers).value!
     end
 
     #
@@ -698,13 +694,12 @@ module Azure::CognitiveServices::SpellCheck::V1_0
     #
     # @return [Concurrent::Promise] Promise object which holds the HTTP response.
     #
-    def spell_checker_async(text, accept_language:nil, pragma:nil, user_agent:nil, client_id:nil, client_ip:nil, location:nil, action_type:nil, app_name:nil, country_code:nil, client_machine_name:nil, doc_id:nil, market:nil, session_id:nil, set_lang:nil, user_id:nil, mode:nil, pre_context_text:nil, post_context_text:nil, custom_headers:nil)
+    def spell_checker_async(text, accept_language = nil, pragma = nil, user_agent = nil, client_id = nil, client_ip = nil, location = nil, action_type = nil, app_name = nil, country_code = nil, client_machine_name = nil, doc_id = nil, market = nil, session_id = nil, set_lang = nil, user_id = nil, mode = nil, pre_context_text = nil, post_context_text = nil, custom_headers = nil)
       x_bing_apis_sdk = 'true'
       fail ArgumentError, 'text is nil' if text.nil?
 
 
       request_headers = {}
-      request_headers['Content-Type'] = 'application/x-www-form-urlencoded'
 
       # Set Headers
       request_headers['x-ms-client-request-id'] = SecureRandom.uuid
@@ -715,14 +710,6 @@ module Azure::CognitiveServices::SpellCheck::V1_0
       request_headers['X-MSEdge-ClientID'] = client_id unless client_id.nil?
       request_headers['X-MSEdge-ClientIP'] = client_ip unless client_ip.nil?
       request_headers['X-Search-Location'] = location unless location.nil?
-
-      # Set Form Data
-      form_data = {}
-      form_data['Mode'] = mode.to_s unless mode.to_s.nil?
-      form_data['PreContextText'] = pre_context_text unless pre_context_text.nil?
-      form_data['PostContextText'] = post_context_text unless post_context_text.nil?
-      form_data['Text'] = text unless text.nil?
-
       path_template = 'spellcheck'
 
       request_url = @base_url || self.base_url
@@ -731,7 +718,6 @@ module Azure::CognitiveServices::SpellCheck::V1_0
           middlewares: [[MsRest::RetryPolicyMiddleware, times: 3, retry: 0.02], [:cookie_jar]],
           query_params: {'ActionType' => action_type,'AppName' => app_name,'cc' => country_code,'ClientMachineName' => client_machine_name,'DocId' => doc_id,'mkt' => market,'SessionId' => session_id,'SetLang' => set_lang,'UserId' => user_id},
           headers: request_headers.merge(custom_headers || {}),
-          body: URI.encode_www_form(form_data),
           base_url: request_url
       }
       promise = self.make_request_async(:post, path_template, options)
@@ -770,7 +756,9 @@ module Azure::CognitiveServices::SpellCheck::V1_0
     #
     def add_telemetry
         sdk_information = 'azure_cognitiveservices_spellcheck'
-        sdk_information = "#{sdk_information}/0.17.0"
+        if defined? Azure::CognitiveServices::SpellCheck::V1_0::VERSION
+          sdk_information = "#{sdk_information}/#{Azure::CognitiveServices::SpellCheck::V1_0::VERSION}"
+        end
         add_user_agent_information(sdk_information)
     end
   end
